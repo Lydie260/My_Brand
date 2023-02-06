@@ -357,7 +357,7 @@ padding-bottom: .5rem;
 }
 .services .box-container{
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 gap: 2rem;
 }
 .services .box-container .box{
@@ -413,7 +413,7 @@ overflow: hidden;
     font-size: 5rem;
     color: var(--black);
     text-transform: uppercase;
-    padding-bottom: 2rem; }
+     }
 .contact form{
     margin: 1rem auto;
     max-width: 70rem;
@@ -424,6 +424,8 @@ overflow: hidden;
 .contact form .box{
     padding: 1rem 1.5rem;
     width: 100%;
+    max-height: 20rem;
+
     background: none;
     color: var(--black);
     font-size: 1.6rem;
