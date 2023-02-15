@@ -35,10 +35,8 @@ html{
 body{
     background: var(--bg-color);
     padding-top: 2rem;
-    /* padding-left: 3rem;
-    padding-right: 3rem; */
+    
     color:var(--white);
-    /* overflow: hidden; */
     height: 100vh;
 
 }
@@ -47,7 +45,6 @@ body{
 }
 
 nav{
-    /* background-color: var(--blue); */
     height: 10rem;
     width: 100%;
     display: flex;
@@ -57,11 +54,9 @@ nav{
 label.logo{
  color: var(--white);
  font-size: 4rem;
- /* line-height: 5rem; */
 }
 
 nav ul{
-    /* float: right; */
     padding-right: 5rem;
 }
 nav ul li{
@@ -76,19 +71,12 @@ nav ul li{
 
 
 
-/* .navbar.heading{
-    font-size: 2rem;
-
-} */
 .heading span{
     color: var(--blue);
     padding-top: 10rem;
 
 }
-/* .navbar{
-    display: inline;
 
-} */
 .navbar li {
     list-style: none;
     display: inline;
@@ -98,8 +86,7 @@ padding-left: 25rem;
 
 }
 .nav_buttons {
-    /* padding-right: 10rem; */
-    /* float: right; */
+ 
     padding-top: 1.5rem;
     padding-left: 40rem;
 }
@@ -163,34 +150,7 @@ button{
     display: flex;
 
 }
-/* .Blogs{
-    background: rgba(53, 54, 95, 0.3) ;
-    padding: 5rem;
-    width: 60%;
-    margin-top: 5rem;
-    margin-left: 20rem;
-    display: flex;
 
-
-}
-.left {
-
-    flex-direction: column;
-}
-.left image{
-    width: 100%;
-
-}
-.logo span{
-    color: var(--blue);
-}
-.heading{
-    padding-left: 23rem;
-    padding-top: 2rem;
-}
-.right{
-    padding-right: 10rem;
-} */
 .blog-img{
     width: 30rem;
 }
@@ -201,7 +161,6 @@ button{
 }
 
 .main{
-    /* background-color:#000000; */
     padding: 5rem 0;
 }
 .blog .h2{
