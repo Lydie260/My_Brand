@@ -236,6 +236,10 @@ textarea{
     padding: 0.3rem;
 
 }
+.plus-button{
+    background-color: #3498DB;
+    color: #fff;
+}
 .delete-icon{
     background-color: #eb3c3c;
     width: 3rem;
