@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+:root{
+    --blue:#3498DB;
+    --white:#fff;
+    --light-color:#777;
+    --bg-color:#10162A;
+    --border:.1rem solid rgba(235, 38, 38, 0.2);
+    --box-shadow:.4rem .4rem 1rem #ccc,
+                -.4rem -.4rem 1rem #fff;
+    --box-shadow-inset:.4rem .4rem 1rem #ccc inset,
+          -.4rem -.4rem 1rem #fff inset;            
+
+}
+img{
+    width: 60rem;
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+
+    
+}
+html{
+    font-size: 62.5%;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+section{
+    min-height: 100vh;
+    padding: 2rem;
+}
+body{
+    background: var(--bg-color);
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    padding-right: 3rem; 
+    color:var(--white);
+    
+
+}
+.dashbord{
+    padding-left: 3rem;
+    background-color: #10162A;
+    width: 25rem;
+    margin-left: 5rem;
+    height: 70rem;
+    position: fixed;
+    border-right: #fff solid;
+    
+}
+.side-nav{
+    margin-right: 2rem;
+    margin-top: 5rem;
+}
+.side-nav a{
+    display: block;
+    margin: 3rem 0;
+    padding:1rem 1rem;
+    border-radius:5rem;
+    font-size: 1.5rem;
+    background-color: #fff;
+    color: #3498DB;
+    text-align: center;
+    
+
+}
+.side-nav button{
+    margin: 3rem 0;
+    margin-left: 5rem;
+    padding:1rem;
+    width: 15rem;
+    border-radius:5rem;
+    font-size: 1.5rem;
+    background-color: #3498DB;
+    color:#fff ;
+    text-align: center;
+}
+.main-dashbord{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.search-field input{
+    margin-right: 50rem;
+    border-radius: 3rem;
+    padding: 1rem;
+    width: 20rem;
+}
+.dashbord-cards {
+    background-color: #fff;
+    color: #10162A;
+    display: flex;
+    padding: 2rem;
+    margin: 2rem;
+    
+}
+.container {
+    padding: 20px 25px;
+    margin-left: 10rem;
+  }
+  .content-card{
+    display: flex;
+    gap: 20px;
+}
+.card{
+    background-color: #fff;
+    border-radius: 10px;
+    color:#10162A;
+    width:177px;
+    height:100px;
+    gap: 10px;
+    display: flex;
+  align-items: center;
+  padding:0px 35px ;
+  margin: 45px 0px;
+    
+}
+.icon-card{
+    font-size: 30px;
+    background: #3E9CDC;
+    color: var(--text-white);
+    padding: 10px;
+    border-radius: 10px;
+  
+    
+}
+.card-span{
+    font-weight: 900;
+   
+    font-size: 20px;
+}
+.sub-tilte{
+font-size: 20px;
+
+}
+.icon {
+    font-size: 20px;
+    padding: 10px 15px;
+  }
+.content-card{
+    display: flex;
+    gap: 20px;
+}
+.container-blog{
+    background: #fff;
+    color: #10162A;
+    border-radius: 0.5rem;
+    margin-top: 10rem;
+margin-left: 5rem;
+
+}.blog-list{
+    background: #fff;
+    color: #10162A;
+    border-radius: 0.5rem;
+}
+h6{
+    font-size: 2rem;
+    padding: 2rem;
+    
+}
+table{
+    width: 70rem;
+    height: 30rem;
+    border-collapse: collapse;
+    border-radius: 5px 5px 0 0;
+    padding-left: 5rem;
+    overflow: hidden;
+
+    color: #10162A;
+    
+    
+
+}
+table thead tr{
+    text-align: left;
+
+}
+table th , table td{
+    padding: 12px 15px;
+}
+thead{
+    font-size: 2.5vmin;
+    font-weight: bold;
+}
+.add-blog{
+    background-color: rgba(53, 54, 95, 0.3) ;
+    width: 60rem;
+    padding: 1rem;
+    margin-left: 10rem;
+}
+.add-blog input{
+width: 40rem;
+background-color: rgba(53, 54, 95, 0.3) ;
+border: solid 0.8px #3498DB;
+padding: 1rem;
+border-radius: 1rem;
+margin-bottom: 2rem;
+}
+textarea{
+    background-color: rgba(53, 54, 95, 0.3) ;
+    width: 40rem;
+    border: solid 0.8px #3498DB;
+    border-radius: 1rem;
+    padding: 1rem;
+
+
+}
+.post{
+    width: 15rem;
+}
+.edit-icon{
+    background-color: #3498DB;
+    width: 3rem;
+    height: 2rem;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 0.3rem;
+
+}
+.plus-button{
+    background-color: #3498DB;
+    color: #fff;
+}
+.delete-icon{
+    background-color: #eb3c3c;
+    width: 3rem;
+    padding: 0.3rem;
+    height: 2rem;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+overflow: auto;
+    }
+    body{
+        padding-left: 0;
+    }
+    .header{
+        left: -100%;
+    }
+    .header.active{
+        left: 0%;
+        transition: .3s linear;
+    }
+   
+  
+   
+   
+    #menu-btn{
+        display: initial;
+    }
+}
+@media(max-width:600px){
+    .content p {
+        width: 100%;
+    }
+}
+@media (max-width:450px){
+    html{
+font-size: 50%;
+    }
+  
+}

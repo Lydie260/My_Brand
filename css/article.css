@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+:root{
+    --blue:#3498DB;
+    --white:#fff;
+    --light-color:#777;
+    --bg-color:#10162A;
+    --border:.1rem solid rgba(235, 38, 38, 0.2);
+    --box-shadow:.4rem .4rem 1rem #ccc,
+                -.4rem -.4rem 1rem #fff;
+    --box-shadow-inset:.4rem .4rem 1rem #ccc inset,
+          -.4rem -.4rem 1rem #fff inset;            
+
+}
+img{
+    width: 60rem;
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+
+    
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    background: var(--bg-color);
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+   
+    color:var(--white);
+  
+
+
+}
+.header{
+  
+    width: 80rem;
+    height: 350px;
+    margin: auto;
+}
+h1{
+  text-decoration-line:underline ;
+  text-decoration-style: solid;
+  text-decoration-color: #fff;
+  padding-left: 15rem;
+
+
+
+
+
+}
+.author{
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    padding-left: 15rem;
+    font-style: italic;
+}
+.article-content{
+    font-size: 1.5rem;
+    padding: 5rem 10rem;
+}
+.input-comment{
+    padding: 5rem;
+    width: 60rem;
+    height: 43rem;
+    margin-left: 4rem;
+}
+.input-field{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    background: rgba(53, 54, 95, 0.3) ;
+
+
+}
+textarea{
+    width: 50rem;
+    height: 20rem;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    background: rgba(53, 54, 95, 0.3) ;
+}
+.add-comment{
+    margin-left: 10rem;
+    padding-bottom: 0.2rem;
+
+}
+.submit{
+    background-color: #3498DB;
+    color: white;
+    width: 15rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 0.2rem;
+}
+.recent-comments{
+    background: rgba(53, 54, 95, 0.3) ;
+    width: 50rem;
+    height: 10rem;
+    padding: 3rem;
+    margin-left: 9rem;
+}.read-recent-comment{
+    margin-left: 10rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+}
+h3{
+    color: #3498DB;
+    font-size: 1.5rem
+}
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+overflow: auto;
+    }
+    body{
+        padding-left: 0;
+    }.main{
+        width:90rem;
+        height: 90rem;
+    }
+    .header{
+        left: -100%;
+    }
+    .header.active{
+        left: 0%;
+        transition: .3s linear;
+    }
+    .about{
+        width: 70%;
+        height: 70%;
+    }
+    .about .heading{
+        width: 100%;
+        padding-left: 10%;
+    }
+   
+   
+    #menu-btn{
+        display: initial;
+    }
+}
+@media(max-width:600px){
+    .content p {
+        width: 100%;
+    }
+    .input-comment{
+        width: 45rem;
+    }
+    textarea{
+        width: 35rem;
+    }
+    .recent-comments{
+        width: 35rem;
+
+    }
+}
+@media (max-width:450px){
+    html{
+font-size: 50%;
+    }
+    .header{
+        width: 100%;
+        border-right: 0;
+    }
+}

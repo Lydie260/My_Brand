@@ -61,7 +61,6 @@ section{
 border-radius: 1rem;
     background: var(--bg-color);
     width:  30rem;
-    /* border-right: var(--border); */
     height: 95%;
     padding: 2rem;
     text-align: center;
@@ -239,7 +238,6 @@ padding-bottom: .5rem;
     flex: 1 1 40rem;
     display: flex;
     gap: 2rem;
-    /* flex-wrap: wrap; */
     padding-left: 5rem;
 }
 .about .row .box-content
@@ -247,28 +245,7 @@ padding-bottom: .5rem;
     flex: 1 1 40rem;
 }
 
-/* .about .row .box-container .box{
-    text-align: center;
-    padding: 2rem;
-    flex: 1 1 18rem;
-    border-radius: .5rem;
-    box-shadow: var(--box-shadow);
 
-} */
-/* .about .row .box-container .box h3{
-    font-size: 2rem;
-    color: var(--black);
-    line-height: 1.1;
-
-} */
-
-
-/* .about .row .box-container .box p{
-    font-size: 1.5rem;
-    color: var(--light-color);
-    padding: .5rem 0;
-
-} */
 
 .about .row .content h3{
     font-size: 2.5rem;
@@ -288,13 +265,9 @@ padding-bottom: .5rem;
 .about .row .content p{
     font-size: 2rem;
     color: var(--light-color);
-    /* line-height: 1.8; */
-    /* padding: 1rem 0; */
+    
 }
-/* .progress .skills{
-    background: rgba(255,255,255,.2);
-    width: 20rem;
-} */
+
 .about .row .progress{
     padding-left: 5rem;
     padding-top: 2rem;
@@ -469,7 +442,6 @@ overflow: auto;
         transition: .3s linear;
     }
     .about{
-        /* left: 50%; */
         width: 70%;
         height: 70%;
     }
@@ -487,7 +459,6 @@ overflow: auto;
     .content p {
         color: #27ae60;
         width: 100%;
-        /* padding-right: 20%; */
     }
 }
 @media (max-width:450px){
