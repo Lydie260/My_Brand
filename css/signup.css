@@ -52,6 +52,9 @@ body{
     text-align: center;
     padding-bottom: 2rem;
 }
+.arrow{
+    font-size: 2rem;
+}
 .form-wrap{
     background: var(--blue);
 padding: 8rem;
