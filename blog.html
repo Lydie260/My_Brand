@@ -5,160 +5,190 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <link rel="stylesheet" href="./css/blog.css">
-    <title>MyBlog</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <nav>
-        <label class="logo">My<span>Blog</span></label>
+        <label class="logo">MyBlog</label>
 
-        <ul>
-            <li> <a href="./index.html">Home</a> </li>
-            <li> <a href="./allBlogs.html">Blogs</a> </li>
-            <li> <a href="#"></a> My Work</li>
+        <i id="menu-btn" class="fa-solid fa-bars icon"></i>
+        <ul class="nav-list">
+            <li> <a href="#" onclick="toggle()">Home</a> </li>
+            <li> <a href="./allBlogs.html" onclick="toggle()">Blogs</a> </li>
+            <li> <a href="#" onclick="toggle()">My Work</a> </li>
+            <li> <a class="signin" href="#" onclick="toggle()">Login</a> </li>
+            <li> <a class="signup" href="#" onclick="toggle()">Sign Up</a> </li>
 
 
         </ul>
-        <div class="nav_buttons">
-            <a href="" class="signin">Login</a>
-            <a href="./signUp.html" class="signup">Sign Up</a>
-        </div>
+
 
     </nav>
-
-    <div class="subscribe">
-        <input type="text" name="" id="input" placeholder="Type your email address" />
-        <button class="sub">Subscribe</button>
-
-    </div>
-    <div class="Topics">
-        <div class="content">
-            <h1>Popular Topics</h1>
-            <p>Don’t miss out on the latest news about <br> Travel tips,
-                Hotels, review,Food guide</p>
-        </div>
-
-
-        <div class="image_container">
-            <img src="./img/sea-water-ocean-wave-surfing-surface-colorful-vibrant-sunset-barrel-shape-124362369.jpg"
-                alt="">
-            <img src="./img/water-drop-23006926.jpg" alt="">
-            <img src="./img/sea-water-ocean-wave-surfing-surface-colorful-vibrant-sunset-barrel-shape-124362369.jpg"
-                alt="">
+    <section class="front-section">
+        <div class="subscribe">
+            <input type="text" name="" id="input" placeholder="Type your email address" />
+            <button class="subscribe-button">Subscribe</button>
 
         </div>
-
-    </div>
-  
-    <main>
-        <div class="main">
+        <section class="top" id="top">
             <div class="container">
-                <div class="blog">
-                    <h5 class="h5">Latest Blog Post</h5>
-                    <div class="blog-card-group">
-                        <div class="blog-card">
-                            <div class="blog-card-banner">
-                                <img src="./img/mongo.png" alt="" class="blog-img" > <br>
-                                <a href="./article.html" class="read">Read More</a>
+                <div class="card topic-card">
+                    <div class="card-content">
+                        <div class="topics-content">
+                            <h2 class="headline" id="topic-label">
+                                Popular Topics
 
+                            </h2>
+                            <p class="card-text">
+                                Don’t miss out on the latest news about <br> Travel tips,
+                                Hotels, review,Food guide.......
+                            </p>
 
-
-                            </div>
-                            <div class="blog-content-wrapper">
-                                <h3>
-<h3 class="h3">How Mongo db Works</h3>                                </h3>
-                                <p class="blog-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum autem tempore <br>
-                                    eius nulla fugit omnis minima, cupiditate exercitationem <br> quaerat et natus, dolore
-                                    soluta nobis quod excepturi nesciunt quidem in! Vel.
-                                </p>
-                                <div class="wrapper-flex">
-                                    <div class="profile-wrapper">
-                                        <img src="./img/lyd2.jpg" alt="lydie M" class="blog-profile">
-
-                                    </div>
-                                    <div class="wrapper">
-                                        <h4 class="h4">Lydie M</h4>                                        <p class="text-sm">
-                                            <p class="text-sm">
-                                            <time datetime="2022-02-07">Feb 06, 2023</time>
-                                            <span class="separator"></span>
-                                            <ion-icon name="time-outline"></ion-icon>
-                                            <time datetime="PT3"> 3 min</time>
-                                        </p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blog-card">
-                            <div class="blog-card-banner">
-                                <img src="./img/rest.png" alt="" class="blog-img" width="250"> <br>
-                                 <a href="./article.html" class="read">Read More</a>
-
-
-                            </div>
-                            <div class="blog-content-wrapper">
-                             <h3 class="h3"> How Mongo db Works</h3>
-                                <p class="blog-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum autem tempore
-                                    eius nulla fugit omnis minima, cupiditate exercitationem quaerat et natus, dolore
-                                    soluta nobis quod excepturi nesciunt quidem in! Vel.
-                                </p>
-                                <div class="wrapper-flex">
-                                    <div class="profile-wrapper">
-                                        <img src="./img/lyd2.jpg" alt="lydie M" class="blog-profile">
-                                    </div>
-                                    <div class="wrapper">
-<h4 class="h4">Lydie M</h4>                                        <p class="text-sm">
-                                            <time datetime="2022-02-07">Feb 06, 2023</time>
-                                            <span class="separator"></span>
-                                            <ion-icon name="time-outline"></ion-icon>
-                                            <time datetime="PT3"> 3 min</time>
-                                        </p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blog-card">
-                            <div class="blog-card-banner">
-                                <img src="./img/rest.png" alt="" class="blog-img" width="250"> <br>
-                                <a href="./article.html" class="read">Read More</a>
-
-
-                            </div>
-                            <div class="blog-content-wrapper">
-                             <h3 class="h3"> How Mongo db Works</h3>
-                                <p class="blog-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum autem tempore
-                                    eius nulla fugit omnis minima, cupiditate exercitationem quaerat et natus, dolore
-                                    soluta nobis quod excepturi nesciunt quidem in! Vel.
-                                </p>
-                                <div class="wrapper-flex">
-                                    <div class="profile-wrapper">
-                                        <img src="./img/lyd2.jpg" alt="lydie M" class="blog-profile">
-                                    </div>
-                                    <div class="wrapper">
-<h4 class="h4">Lydie M</h4>                                        <p class="text-sm">
-                                            <time datetime="2022-02-07">Feb 06, 2023</time>
-                                            <span class="separator"></span>
-                                            <ion-icon name="time-outline"></ion-icon>
-                                            <time datetime="PT3"> 3 min</time>
-                                        </p>
-
-                                    </div>
-                                </div>
-                            </div>
                         </div>
 
+                        <div class="image_cont">
+                            <img src="./img/water-drop-23006926.jpg" alt="" class="img1">
+                            <img src="./img/sea-water-ocean-wave-surfing-surface-colorful-vibrant-sunset-barrel-shape-124362369.jpg"
+                                alt="" class="img2">
+                            <img src="./img/water-drop-23006926.jpg" alt="" class="img3">
+                            <img src="./img/sea-water-ocean-wave-surfing-surface-colorful-vibrant-sunset-barrel-shape-124362369.jpg"
+                                alt="" class="img2">
+
+
+                        </div>
                     </div>
+
+
                 </div>
             </div>
 
-        </div>
-    </main>
+        </section>
+
+        <main>
+            <div class="main">
+                <div class="container">
+                    <div class="blog">
+                        <div class="blog-card-group">
+                            <label> Latest Blog Post
+                            </label>
+
+                            <div class="blog-card">
+                                <div class="blog-card-banner">
+                                    <img src="./img/mongo.png" alt="" class="blog-img"> <br>
+                                    <a href="./article.html" class="read">Read More</a>
+
+
+                                </div>
+                                <div class="blog-content-wrapper">
+                                    <h3>
+                                        <h3 class="h3">How Mongo db Works</h3>
+                                    </h3>
+                                    <p class="blog-text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum autem
+                                        tempore <br>
+                                        eius nulla fugit omnis minima, cupiditate exercitationem <br> quaerat et natus,
+                                        dolore
+                                        soluta nobis quod excepturi nesciunt quidem in! Vel.
+                                    </p>
+                                    <div class="wrapper-flex">
+                                        <div class="profile-wrapper">
+                                            <img src="./img/lyd2.jpg" alt="lydie M" class="blog-profile">
+
+                                        </div>
+                                        <div class="wrapper">
+                                            <h4 class="h4">Lydie M</h4>
+                                            <p class="text-sm">
+                                            <p class="text-sm">
+                                                <time datetime="2022-02-07">Feb 06, 2023</time>
+                                                <span class="separator"></span>
+                                                <ion-icon name="time-outline"></ion-icon>
+                                                <time datetime="PT3"> 3 min</time>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <br> <br>
+                            <div class="blog-card">
+                                <div class="blog-card-banner">
+                                    <img src="./img/rest.png" alt="" class="blog-img" width="250"> <br>
+                                    <a href="./article.html" class="read">Read More</a>
+
+                                </div>
+                                <div class="blog-content-wrapper">
+                                    <h3 class="h3"> How Mongo db Works</h3>
+                                    <p class="blog-text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum autem
+                                        tempore
+                                        eius nulla fugit omnis minima, cupiditate exercitationem quaerat et natus,
+                                        dolore
+                                        soluta nobis quod excepturi nesciunt quidem in! Vel.
+                                    </p>
+                                    <div class="wrapper-flex">
+                                        <div class="profile-wrapper">
+                                            <img src="./img/lyd2.jpg" alt="lydie M" class="blog-profile">
+                                        </div>
+                                        <div class="wrapper">
+                                            <h4 class="h4">Lydie M</h4>
+                                            <p class="text-sm">
+                                                <time datetime="2022-02-07">Feb 06, 2023</time>
+                                                <span class="separator"></span>
+                                                <ion-icon name="time-outline"></ion-icon>
+                                                <time datetime="PT3"> 3 min</time>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog-card">
+                                <div class="blog-card-banner">
+                                    <img src="./img/rest.png" alt="" class="blog-img" width="250"> <br>
+                                    <a href="./article.html" class="read">Read More</a>
+
+                                </div>
+                                <div class="blog-content-wrapper">
+                                    <h3 class="h3"> How Mongo db Works</h3>
+                                    <p class="blog-text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum autem
+                                        tempore
+                                        eius nulla fugit omnis minima, cupiditate exercitationem quaerat et natus,
+                                        dolore
+                                        soluta nobis quod excepturi nesciunt quidem in! Vel.
+                                    </p>
+                                    <div class="wrapper-flex">
+                                        <div class="profile-wrapper">
+                                            <img src="./img/lyd2.jpg" alt="lydie M" class="blog-profile">
+                                        </div>
+                                        <div class="wrapper">
+                                            <h4 class="h4">Lydie M</h4>
+                                            <p class="text-sm">
+                                                <time datetime="2022-02-07">Feb 06, 2023</time>
+                                                <span class="separator"></span>
+                                                <ion-icon name="time-outline"></ion-icon>
+                                                <time datetime="PT3"> 3 min</time>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+    </section>
+    <script src="./JS/trial.js"></script>
+    <!-- <script src="./json.js"></script> -->
+
 </body>
 
 </html>

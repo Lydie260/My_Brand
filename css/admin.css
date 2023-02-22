@@ -54,6 +54,7 @@ body{
     height: 70rem;
     position: fixed;
     border-right: #fff solid;
+    position: fixed;
     
 }
 .side-nav{
@@ -104,6 +105,15 @@ body{
     margin: 2rem;
     
 }
+.blog-content{
+    width: 80rem;
+    padding: 2rem;
+    background-color: rgba(53, 54, 95, 0.3) ;
+    margin-left: 16rem;
+    border-radius: 1rem;
+    margin-top: 1.3rem;
+    
+  }
 .container {
     padding: 20px 25px;
     margin-left: 10rem;
@@ -215,8 +225,37 @@ textarea{
 
 
 }
+.blog-added{
+    background: #3498DB;
+}
 .post{
     width: 15rem;
+}
+.add-blog h2{
+    padding-bottom: 3rem;
+
+}
+#menu-btn{
+    position: fixed;
+    top: 1.5rem;
+    left: 2rem;  
+    z-index: 1000;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    color: var(--black);
+    display: none;
+
+
+
+}
+.add-blog label{
+    padding-top: 2rem;
 }
 .edit-icon{
     background-color: #3498DB;
@@ -242,22 +281,49 @@ textarea{
 
 
 
-@media (max-width:991px){
+
+
+
+
+
+
+
+@media (max-width:667px){
     html{
         font-size: 55%;
-overflow: auto;
+        overflow: hidden;
     }
     body{
         padding-left: 0;
     }
-    .header{
+    .dashbord{
         left: -100%;
+        position: fixed;
+        width: 50%;
+
     }
-    .header.active{
+.content-card{
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.card{
+    width: 80%;
+}
+    .dashbord.active{
         left: 0%;
         transition: .3s linear;
+        position:fixed;
     }
-   
+    table{
+        width: 50%;
+        height: 50%;
+    }
+  .blog-content{
+    width: 100%;
+    margin-right: 10rem;
+  }
   
    
    
@@ -265,14 +331,4 @@ overflow: auto;
         display: initial;
     }
 }
-@media(max-width:600px){
-    .content p {
-        width: 100%;
-    }
-}
-@media (max-width:450px){
-    html{
-font-size: 50%;
-    }
-  
-}
+

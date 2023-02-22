@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./css/blog.css">
 
   <link rel="stylesheet" href="./css/admin.css">
-  <title>Document</title>
+  <title>Admin Page</title>
 </head>
 
 <body>
@@ -18,18 +18,22 @@
     <h1>MyBlog</h1>
     <div class="side-nav">
       <a href="">Dashboard</a>
-      <a href="#blogs">View all Blogs</a>
-      <a href="#manage-blogs">Manage Blogs</a>
-      <a href="#manage-users">Manage Users</a>
-      <button class="plus-button" > </button>
+      <a href="#blogs" onclick="toggle()">View all Blogs</a>
+      <a href="#manage-blogs" onclick="toggle()">Manage Blogs</a>
+      <a href="#manage-users" onclick="toggle()">Manage Users</a>
+      <a href="#add-blogs" class="blog-added"> <i class="fa-solid fa-plus" onclick="toggle()"></i>Add Blog</a>
 
+      
 
 
     </div>
   </div>
+
   <section class="main-dashbord" id="main-dashbord">
 
     <section class="container">
+      <div id="menu-btn" class="fas fa-bars"></div>
+
       <div class="content-dashboard">
 
 
@@ -137,8 +141,70 @@
       </div>
     </section>
     <section class="container" id="blogs">
- 
       <div class="blog">
+          <div class="blog-content">
+            <h2>How Mongo db works</h2>
+            <h3>Lydie M</h3>
+    
+              <p align="justify">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo
+                neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. <br> Explicabo neque iste fuga maxime atque Lorem ipsum 
+                dolor sit amet consectetur, adipisicing elit. Explicabo neque iste <br>
+                fuga maxime atque Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Explicabo neque iste fuga maxime atque
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo
+                neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. <br> Explicabo neque iste fuga maxime atque Lorem ipsum 
+                dolor sit amet consectetur, adipisicing elit. Explicabo neque iste <br>
+                fuga maxime atque Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Explicabo neque iste fuga maxime atque
+              </p>
+        </div>
+
+        <div class="blog-content">
+          <h2>How Mongo db works</h2>
+          <h3>Lydie M</h3>
+  
+            <p align="justify">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo
+              neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. <br> Explicabo neque iste fuga maxime atque Lorem ipsum 
+              dolor sit amet consectetur, adipisicing elit. Explicabo neque iste <br>
+              fuga maxime atque Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Explicabo neque iste fuga maxime atque
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo
+              neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. <br> Explicabo neque iste fuga maxime atque Lorem ipsum 
+              dolor sit amet consectetur, adipisicing elit. Explicabo neque iste <br>
+              fuga maxime atque Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Explicabo neque iste fuga maxime atque
+            </p>
+      </div>
+      <div class="blog-content">
+        <h2>How Mongo db works</h2>
+        <h3>Lydie M</h3>
+
+          <p align="justify">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo
+            neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. <br> Explicabo neque iste fuga maxime atque Lorem ipsum 
+            dolor sit amet consectetur, adipisicing elit. Explicabo neque iste <br>
+            fuga maxime atque Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. Explicabo neque iste fuga maxime atque
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo
+            neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. <br> Explicabo neque iste fuga maxime atque Lorem ipsum 
+            dolor sit amet consectetur, adipisicing elit. Explicabo neque iste <br>
+            fuga maxime atque Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. Explicabo neque iste fuga maxime atque
+          </p>
+    </div>
+       
+      </div>
+      
+ 
+      <!-- <div class="blog">
         <div class="blog-card-group">
           <div class="blog-card">
 
@@ -146,7 +212,7 @@
               <h3>
                 <h3 class="h3">How Mongo db Works</h3>
               </h3>
-              <p align="justify">
+              <p >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum autem tempore
                 eius nulla fugit omnis minima, cupiditate exercitationem quaerat et natus, dolore
                 soluta nobis quod excepturi nesciunt quidem in! Vel.
@@ -194,7 +260,7 @@
       </div>
       </div>
 
-      </div>
+      </div> -->
       </main>
     </section>
     <section id="manage-blogs" class="manage-blogs">
@@ -398,6 +464,7 @@
 
 
   </section>
+  <script src="./JS/blog.js"></script>
 </body>
 
 </html>
