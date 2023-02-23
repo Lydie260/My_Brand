@@ -1,5 +1,5 @@
 
-const container = document.querySelector('.blog-card')
+const container = document.querySelector('.blog')
 
 
 
@@ -12,11 +12,13 @@ const renderPosts = async () =>{
     let template = '';
     posts.forEach(post => {
         template += `
+        <div class="blog-content">
         <h2> ${post.title} </h2> <br>
-        <p> ${post.body.slice(0, 200)}</p> <br>
+        <h3> <i>  ${post.author} </i></h3>
+        <p> ${post.description}</p> <br>
         <p><small>${post.datePosted} Date Posted </small> </p> <br>
+        </div>
 
-        <a href="./article.html" class="read">Read More</a>
 
         
         `
