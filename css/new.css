@@ -1,0 +1,153 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: montserrat;
+    background-color: #031c30;
+}
+a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+button{
+    cursor: pointer;
+}
+nav ul li{
+    cursor: pointer;
+    display: inline-block;
+    color: #fff;
+    justify-content: space-between;
+    gap: 10rem;
+    align-items: center;
+    font-size: 2rem;
+
+
+
+}
+nav {
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+.nav-content{
+    display: flex;
+    justify-content: space-between;
+    /* gap: 10rem; */
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+
+}
+.nav-buttons .login{
+    background-color: #031c30;
+    border: 2px solid #419ce6;
+    border-radius: 0.5rem;
+    color: #fff;
+    padding: 0.5rem 1.7rem;
+    font-size: 1rem;
+    margin-right: 1.5rem;
+}
+.nav-buttons .signup{
+    background-color: #3498DB;
+    border-radius: 0.5rem;
+    color: #fff;
+    padding: 0.5rem 1.7rem;
+    font-size: 1rem;
+    margin-right: 1.5rem;
+    border: none;
+}
+.nav-buttons{
+    float: right;
+}
+
+.hero{
+    /* min-height: 86vh; */
+    display: flex;
+    align-items: center;
+}
+.welcome{
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    /* width: 80%; */
+    font-size: 3rem;
+    margin: 5rem auto;
+    height: 70%;
+}
+
+#input{
+    padding: 1rem;
+    width: 25rem;
+    background-color: #031c30;
+    border: 1px solid #3498DB ;
+
+}
+.subscribe{
+    padding-top: 2rem;
+      }
+      .subscribe-button{
+        padding: 1rem;
+        background-color: #3498DB;
+        font-size: 1rem;
+        border: none;
+        color: #fff;
+       }
+
+       .Hi{
+        color: #3498DB;
+       }
+       .well{
+        color: #fff;
+
+       }
+       .Popular-Topics{
+display: flex;
+padding: 3rem;
+margin: auto;
+width: 65%;
+height: 20%;
+margin-bottom: 2rem;
+background-color: rgba(53, 54, 95, 0.3) ;
+}
+.topic{
+    padding-top: 3rem;
+    color: #fff;
+}
+.img1{
+    border-radius: 0.3rem;
+    opacity: 0.5;
+}
+.img2{
+    border-radius: 0.3rem;
+    opacity: 0.5;
+}
+.img3{
+    border-radius: 0.3rem;
+    opacity: 0.5;
+}
+.topic-images{
+    padding-left: 2rem;
+    /* position: relative; */
+  /* display: flex; */
+}
+/* .adventure{
+    position: absolute;
+    top: 50%;
+}
+.Life{
+    position: absolute;
+    top: 50%;
+}
+.Sports{
+    position: absolute;
+    top: 60%;
+} */
+
+.Latest-blog-post{
+    text-align: center;
+}

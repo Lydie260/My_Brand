@@ -142,8 +142,8 @@
     </section>
     <section class="container" id="blogs">
       <div class="blog">
-          <div class="blog-content">
-            <h2>How Mongo db works</h2>
+          <!-- <div class="blog-content"> -->
+            <!-- <h2>How Mongo db works</h2>
             <h3>Lydie M</h3>
     
               <p align="justify">
@@ -159,11 +159,11 @@
                 dolor sit amet consectetur, adipisicing elit. Explicabo neque iste <br>
                 fuga maxime atque Lorem ipsum dolor sit amet consectetur,
                 adipisicing elit. Explicabo neque iste fuga maxime atque
-              </p>
-        </div>
+              </p> -->
+        <!-- </div> -->
 
-        <div class="blog-content">
-          <h2>How Mongo db works</h2>
+        <!-- <div class="blog-content"> -->
+          <!-- <h2>How Mongo db works</h2>
           <h3>Lydie M</h3>
   
             <p align="justify">
@@ -179,13 +179,13 @@
               dolor sit amet consectetur, adipisicing elit. Explicabo neque iste <br>
               fuga maxime atque Lorem ipsum dolor sit amet consectetur,
               adipisicing elit. Explicabo neque iste fuga maxime atque
-            </p>
-      </div>
-      <div class="blog-content">
-        <h2>How Mongo db works</h2>
-        <h3>Lydie M</h3>
+            </p> -->
+      <!-- </div> -->
+      <!-- <div class="blog-content"> -->
+        <!-- <h2 class="post.title">How Mongo db works</h2>
+        <h3 class="author">Lydie M</h3>
 
-          <p align="justify">
+          <p align="justify" class="description">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo
             neque iste fuga maxime atque Lorem ipsum dolor sit amet consectetur,
             adipisicing elit. <br> Explicabo neque iste fuga maxime atque Lorem ipsum 
@@ -198,10 +198,10 @@
             dolor sit amet consectetur, adipisicing elit. Explicabo neque iste <br>
             fuga maxime atque Lorem ipsum dolor sit amet consectetur,
             adipisicing elit. Explicabo neque iste fuga maxime atque
-          </p>
+          </p> -->
     </div>
        
-      </div>
+      <!-- </div> -->
       
  
       <!-- <div class="blog">
@@ -285,7 +285,7 @@
               <td>31/Jan/2023</td>
               <td>20 likes</td>
               <td>10 comments</td>
-              <td> <i class="fa-solid fa-pen-to-square edit-icon "></i> <i class="fa-solid fa-trash delete-icon"></i>
+              <td>   <i onclick="editRow(this)"  class="fa-solid fa-pen-to-square edit-icon "></i> <i class="fa-solid fa-trash delete-icon"></i>
               </td>
 
             </tr>
@@ -295,7 +295,7 @@
               <td>31/Jan/2023</td>
               <td>20 likes</td>
               <td>10 comments</td>
-              <td> <i class="fa-solid fa-pen-to-square edit-icon"></i> <i class="fa-solid fa-trash delete-icon"></i>
+              <td>    <i onclick="editRow(this)"  class="fa-solid fa-pen-to-square edit-icon "></i><i class="fa-solid fa-trash delete-icon"></i>
               </td>
 
 
@@ -306,7 +306,7 @@
               <td>31/Jan/2023</td>
               <td>20 likes</td>
               <td>10 comments</td>
-              <td> <i class="fa-solid fa-pen-to-square edit-icon"></i> <i class="fa-solid fa-trash delete-icon"></i>
+              <td>    <i onclick="editRow(this)"  class="fa-solid fa-pen-to-square edit-icon "></i> <i class="fa-solid fa-trash delete-icon"></i>
               </td>
 
 
@@ -317,7 +317,7 @@
               <td>31/Jan/2023</td>
               <td>20 likes</td>
               <td>10 comments</td>
-              <td> <i class="fa-solid fa-pen-to-square edit-icon"></i> <i class="fa-solid fa-trash delete-icon"></i>
+              <td>    <i onclick="editRow(this)"  class="fa-solid fa-pen-to-square edit-icon "></i><i class="fa-solid fa-trash delete-icon"></i>
               </td>
 
 
@@ -328,7 +328,7 @@
               <td>31/Jan/2023</td>
               <td>20 likes</td>
               <td>10 comments</td>
-              <td> <i class="fa-solid fa-pen-to-square edit-icon"></i> <i class="fa-solid fa-trash delete-icon"></i>
+              <td>    <i onclick="editRow(this)"  class="fa-solid fa-pen-to-square edit-icon "></i>   <i class="fa-solid fa-trash delete-icon"></i>
               </td>
 
 
@@ -339,7 +339,7 @@
               <td>31/Jan/2023</td>
               <td>20 likes</td>
               <td>10 comments</td>
-              <td> <i class="fa-solid fa-pen-to-square edit-icon"></i> <i class="fa-solid fa-trash delete-icon"></i>
+              <td>    <i onclick="editRow(this)"  class="fa-solid fa-pen-to-square edit-icon "></i><i class="fa-solid fa-trash delete-icon"></i>
               </td>
 
 
@@ -349,6 +349,7 @@
       </div>
     </section>
     <section id="manage-users" class="manage-users">
+    
       <div class="container-blog">
         <h6> Manage Users</h6>
         <table>
@@ -367,66 +368,66 @@
           <tbody>
             <tr>
               <td class="no">01</td>
-              <td>How MongoDb Works</td>
-              <td>31/Jan/2023</td>
+              <td id="blog-title">How MongoDb Works</td>
+              <td id="post-date">31/Jan/2023</td>
               <td>20 likes</td>
               <td>10 comments</td>
-              <td> <i class="fa-solid fa-pen-to-square edit-icon"></i> <i class="fa-solid fa-trash delete-icon"></i>
+              <td>    <i class="fa-solid fa-pen-to-square edit-icon "></i><i class="fa-solid fa-trash delete-icon"></i>
               </td>
 
 
             </tr>
             <tr>
               <td>02</td>
-              <td>How MongoDb Works</td>
-              <td>31/Jan/2023</td>
+              <td id="blog-title">How MongoDb Works</td>
+              <td id="post-date">31/Jan/2023</td>
               <td>20 likes</td>
               <td>10 comments</td>
-              <td> <i class="fa-solid fa-pen-to-square edit-icon"></i> <i class="fa-solid fa-trash delete-icon"></i>
+              <td>    <i  class="fa-solid fa-pen-to-square edit-icon "></i>   <i class="fa-solid fa-trash delete-icon"></i>
               </td>
 
 
             </tr>
             <tr>
               <td>03</td>
-              <td>How MongoDb Works</td>
-              <td>31/Jan/2023</td>
+              <td id="blog-title">How MongoDb Works</td>
+              <td id="post-date">31/Jan/2023</td>
               <td>20 likes</td>
               <td>10 comments</td>
-              <td> <i class="fa-solid fa-pen-to-square edit-icon"></i> <i class="fa-solid fa-trash delete-icon"></i>
+              <td>    <i class="fa-solid fa-pen-to-square edit-icon "></i>    <i class="fa-solid fa-trash delete-icon"></i>
               </td>
 
 
             </tr>
             <tr>
               <td>04</td>
-              <td>How MongoDb Works</td>
-              <td>31/Jan/2023</td>
+              <td id="blog-title">How MongoDb Works</td>
+              <td id="post-date">31/Jan/2023</td>
               <td>20 likes</td>
               <td>10 comments</td>
-              <td> <i class="fa-solid fa-pen-to-square edit-icon"></i> <i class="fa-solid fa-trash delete-icon"></i>
+              <td>    <i class="fa-solid fa-pen-to-square edit-icon "></i><i class="fa-solid fa-trash delete-icon"></i>
               </td>
 
 
             </tr>
             <tr>
               <td>05</td>
-              <td>How MongoDb Works</td>
-              <td>31/Jan/2023</td>
+              <td id="blog-title">How MongoDb Works</td>
+              <td id="post-date">31/Jan/2023</td>
               <td>20 likes</td>
               <td>10 comments</td>
-              <td> <i class="fa-solid fa-pen-to-square edit-icon"></i> <i class="fa-solid fa-trash delete-icon"></i>
+              <td>    <i class="fa-solid fa-pen-to-square edit-icon "></i><i class="fa-solid fa-trash delete-icon"></i>
               </td>
 
 
             </tr>
             <tr>
               <td>06</td>
-              <td>How MongoDb Works</td>
-              <td>31/Jan/2023</td>
+              <td id="blog-title">How MongoDb Works</td>
+              <td id="post-date">31/Jan/2023</td>
               <td>20 likes</td>
               <td>10 comments</td>
-              <td> <i class="fa-solid fa-pen-to-square edit-icon"></i> <i class="fa-solid fa-trash delete-icon"></i>
+              <td>    <i class="fa-solid fa-pen-to-square edit-icon "></i>    <i class="fa-solid fa-trash delete-icon"></i>
               </td>
 
 
@@ -440,31 +441,41 @@
     <section id="add-blogs">
       <div class="add-blog">
         <h2>Add Blog</h2>
+        <form>
         <div class="blog-items">
-          <div class="title">
-            <input type="text" placeholder="title">
-          </div>
-          <div class="author">
-            <input type="text" placeholder="author">
-          </div>
-          <div class="description">
-            <textarea name="" id="" cols="30" rows="10" placeholder="description"></textarea>
+          
+            <div class="title">
+              <input type="text" name="title" placeholder="title">
+            </div>
+            <div class="author">
+              <input type="text" name="author" placeholder="author">
+            </div>
+            <div class="description">
+              <textarea name="description" id="" cols="30" rows="10" placeholder="description"></textarea>
+  
+            </div>
+            <div class="date-posted">
+              <input type="text" name="datePosted" placeholder="date-posted">
 
-          </div>
-          <label for="">Upload Image </label><br>
-
-          <input type="file"> <br>
-
-          <button type="submit" class="post">Post a Blog</button>
-
+            </div>
+            <label for="">Upload Image </label><br>
+  
+            <input type="file" name="img"> <br>
+  
+            <button class="post">Post a Blog</button>
+  
+        
 
         </div>
+      </form>
       </div>
     </section>
 
 
   </section>
+  <script src="./JS/blog-post.js"></script>
   <script src="./JS/blog.js"></script>
+  <script src="./json.js"></script>
 </body>
 
 </html>

@@ -32,3 +32,22 @@ toggle = () => {
   menuBtn.classList.toggle("fa-times");
   menuLink.classList.toggle("active");
 };
+
+
+
+let popup = document.getElementById("popup")
+function editRow(){
+  popup.classList.add("open-popup");
+  const blogtitle = row.cells[0].textContent;
+  const postdate = row.cells[1].textContent;
+  document.getElementById("blog-title").value = blogtitle;
+  document.getElementById("post-date").value = postdate;
+
+
+
+}
+
+function saveChanges(){
+  popup.classList.remove("open-popup");
+
+}
