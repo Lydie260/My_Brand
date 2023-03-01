@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
     <link rel="stylesheet" href="./css/new.css">
-    <title>new</title>
+    <!-- <link rel="stylesheet" href="./css/blog.css"> -->
+
+    <title>Blog</title>
 </head>
+
 <body>
     <nav id="navbar">
         <div class="nav-content">
-            <a href="">
                 <div class="logo">
-                    <p>MyBlog</p>
+                    <p>My<span>Blog</span> </p>
                 </div>
-            </a>
+                <i id="menu-btn" class="fa-solid fa-bars icon"></i>
+
             <ul class="nav-menu">
-                <li class="Home"> <a href=""></a> Home </li> 
-                <li class="Blogs"> <a href=""></a> Blogs </li>
+                <li class="Home"> <a href=""></a> Home </li>
+
+                <li class="Blogs"> <a href="./allBlogs.html">Blogs</a>  </li>
                 <li class="My Work"> <a href=""></a> My Work </li>
 
 
             </ul>
             <div class="nav-buttons">
-                <button class="login">  <a href="">Login</a> </button>
-                <button class="signup">  <a href="">Sign Up</a> </button>
+                <button class="login"> <a href="./signin.html">Login</a> </button>
+                <button class="signup"> <a href="./signUp.html">Sign Up</a> </button>
 
             </div>
             <i id="menu-btn" class="fa-solid fa-bars icon"></i>
@@ -37,13 +44,13 @@
             <div class="greatings">
                 <div class="description">
                     <p class="Hi"> Hi, Everyone </p>
-                    <p class="well">Welcome  to my Blog Site</p>
+                    <p class="well">Welcome to my Blog Site</p>
                 </div>
             </div>
             <div class="subscribe">
                 <input type="text" name="" id="input" placeholder="Type your email address" />
                 <button class="subscribe-button">Subscribe</button>
-    
+
             </div>
 
 
@@ -56,21 +63,124 @@
                 Hotels, review,Food guide.......</p>
 
         </div>
-       
-            <div class="topic-images">
-                <img src="./img/adventure.jpg" width="150px" height="300px" alt="" class="img1">
-                <!-- <h3 class="adventure">adventure</h3> -->
 
-                <img src="./img/life.jpg" width="150px" height="300px" alt="" class="img2">
-                <!-- <h3 class="Life">Life</h3> -->
-                <img src="./img/sports.jpg" width="150px" height="300px"  alt="" class="img3">
-                <!-- <h3 class="Sports">Sports</h3> -->
+        <div class="topic-images">
+            <img src="./img/adventure.jpg" width="150px" height="300px" alt="" class="img1">
+            <!-- <h3 class="adventure">adventure</h3> -->
+
+            <img src="./img/life.jpg" width="150px" height="300px" alt="" class="img2">
+            <!-- <h3 class="Life">Life</h3> -->
+            <img src="./img/sports.jpg" width="150px" height="300px" alt="" class="img3">
+            <!-- <h3 class="Sports">Sports</h3> -->
 
 
-            </div>
+        </div>
     </div>
     <div class="Latest-blog-post">
         <h1>Latest Blog Post</h1>
+     
+        <div class="blog-card-group">
+            <div class="blog-card">
+                <div class="blog-card-banner">
+                    <img src="./img/mongo.png" alt="" class="blog-img"> <br> <br>
+                    <a href="./article.html" class="read-button">Read More</a>
+
+
+
+                </div>
+                <div class="blog-content-wrapper">
+                    <h3>
+                        <h3 class="h3">How Mongo db Works</h3>
+                    </h3>
+                    <p class="blog-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum autem tempore
+                        eius nulla fugit omnis minima, cupiditate exercitationem quaerat et natus, dolore
+                        soluta nobis quod excepturi nesciunt quidem in! Vel.
+                    </p>
+                    <div class="wrapper-flex">
+                        <div class="profile-wrapper">
+                            <img src="./img/lyd2.jpg" alt="lydie M" class="blog-profile">
+
+                        </div>
+                        <div class="wrapper">
+                            <h4 class="h4">Lydie M</h4>
+                            <p class="text-sm">
+                            <p class="text-sm">
+                                <time datetime="2022-02-07">Feb 06, 2023</time>
+                                <span class="separator"></span>
+                                <ion-icon name="time-outline"></ion-icon>
+                                <time datetime="PT3"> 3 min</time>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-card-banner">
+                    <img src="./img/rest.png" alt="" class="blog-img" width="250"> <br> <br>
+                    <a href="./article.html" class="read-button">Read More</a>
+
+                </div>
+                <div class="blog-content-wrapper">
+                    <h3 class="h3"> How Mongo db Works</h3>
+                    <p class="blog-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum autem tempore
+                        eius nulla fugit omnis minima, cupiditate exercitationem quaerat et natus, dolore
+                        soluta nobis quod excepturi nesciunt quidem in! Vel.
+                    </p>
+                    <div class="wrapper-flex">
+                        <div class="profile-wrapper">
+                            <img src="./img/lyd2.jpg" alt="lydie M" class="blog-profile">
+                        </div>
+                        <div class="wrapper">
+                            <h4 class="h4">Lydie M</h4>
+                            <p class="text-sm">
+                                <time datetime="2022-02-07">Feb 06, 2023</time>
+                                <span class="separator"></span>
+                                <ion-icon name="time-outline"></ion-icon>
+                                <time datetime="PT3"> 3 min</time>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-card-banner">
+                    <img src="./img/react.png" alt="" class="blog-img" width="250"> <br> <br> 
+                    <a href="./article.html" class="read-button">Read More</a>
+
+
+                </div>
+
+                <div class="blog-content-wrapper">
+                    <h3 class="h3"> How Mongo db Works</h3>
+                    <p class="blog-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum autem tempore
+                        eius nulla fugit omnis minima, cupiditate exercitationem quaerat et natus, dolore
+                        soluta nobis quod excepturi nesciunt quidem in! Vel.
+                    </p>
+                    <div class="wrapper-flex">
+                        <div class="profile-wrapper">
+                            <img src="./img/lyd2.jpg" alt="lydie M" class="blog-profile">
+                        </div>
+                        <div class="wrapper">
+                            <h4 class="h4">Lydie M</h4>
+                            <p class="text-sm">
+                                <time datetime="2022-02-07">Feb 06, 2023</time>
+                                <span class="separator"></span>
+                                <ion-icon name="time-outline"></ion-icon>
+                                <time datetime="PT3"> 3 min</time>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
 
 
 
@@ -79,4 +189,5 @@
 
 
 </body>
+
 </html>

@@ -3,7 +3,7 @@
     --blue:#3498DB;
     --white:#fff;
     --light-color:#777;
-    --bg-color:#10162A;
+    --bg-color:#031c30;
     --border:.1rem solid rgba(235, 38, 38, 0.2);
     --box-shadow:.4rem .4rem 1rem #ccc,
                 -.4rem -.4rem 1rem #fff;
@@ -48,7 +48,7 @@ body{
 }
 .dashbord{
     padding-left: 3rem;
-    background-color: #10162A;
+    background-color: #031c30;
     width: 25rem;
     margin-left: 5rem;
     height: 70rem;
@@ -61,7 +61,7 @@ body{
     margin-right: 2rem;
     margin-top: 5rem;
 }
-.side-nav a{
+.a{
     display: block;
     margin: 3rem 0;
     padding:1rem 1rem;
@@ -72,6 +72,10 @@ body{
     text-align: center;
     
 
+}
+a{
+    text-decoration: none;
+    color: #fff;
 }
 .side-nav button{
     margin: 3rem 0;
@@ -214,7 +218,8 @@ thead{
     background-color: rgba(53, 54, 95, 0.3) ;
     width: 60rem;
     padding: 1rem;
-    margin-left: 10rem;
+    justify-content: center;
+    /* margin-left: 5rem; */
 }
 .add-blog input{
 width: 40rem;
@@ -236,9 +241,7 @@ textarea{
 .blog-added{
     background: #3498DB;
 }
-.post{
-    width: 15rem;
-}
+
 .add-blog h2{
     padding-bottom: 3rem;
 

@@ -1,38 +1,54 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: montserrat;
     background-color: #031c30;
 }
-a{
+
+a {
     text-decoration: none;
     color: white;
     cursor: pointer;
 }
-button{
+
+.logo {
+    font-size: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.logo span {
+    color: #419ce6;
+}
+
+button {
     cursor: pointer;
 }
-nav ul li{
+
+nav ul li {
     cursor: pointer;
     display: inline-block;
     color: #fff;
+    padding: 0px 20px;
     justify-content: space-between;
-    gap: 10rem;
     align-items: center;
     font-size: 2rem;
 
 
 
 }
+
 nav {
     width: 100%;
     position: sticky;
     top: 0;
+
 }
-.nav-content{
+
+.nav-content {
     display: flex;
     justify-content: space-between;
     /* gap: 10rem; */
@@ -43,7 +59,8 @@ nav {
     padding-top: 1rem;
 
 }
-.nav-buttons .login{
+
+.nav-buttons .login {
     background-color: #031c30;
     border: 2px solid #419ce6;
     border-radius: 0.5rem;
@@ -52,7 +69,8 @@ nav {
     font-size: 1rem;
     margin-right: 1.5rem;
 }
-.nav-buttons .signup{
+
+.nav-buttons .signup {
     background-color: #3498DB;
     border-radius: 0.5rem;
     color: #fff;
@@ -61,16 +79,18 @@ nav {
     margin-right: 1.5rem;
     border: none;
 }
-.nav-buttons{
+
+.nav-buttons {
     float: right;
 }
 
-.hero{
+.hero {
     /* min-height: 86vh; */
     display: flex;
     align-items: center;
 }
-.welcome{
+
+.welcome {
     /* display: flex; */
     justify-content: space-between;
     align-items: center;
@@ -80,61 +100,75 @@ nav {
     height: 70%;
 }
 
-#input{
+#input {
     padding: 1rem;
     width: 25rem;
     background-color: #031c30;
-    border: 1px solid #3498DB ;
+    border: 1px solid #3498DB;
 
 }
-.subscribe{
+
+.subscribe {
     padding-top: 2rem;
-      }
-      .subscribe-button{
-        padding: 1rem;
-        background-color: #3498DB;
-        font-size: 1rem;
-        border: none;
-        color: #fff;
-       }
-
-       .Hi{
-        color: #3498DB;
-       }
-       .well{
-        color: #fff;
-
-       }
-       .Popular-Topics{
-display: flex;
-padding: 3rem;
-margin: auto;
-width: 65%;
-height: 20%;
-margin-bottom: 2rem;
-background-color: rgba(53, 54, 95, 0.3) ;
 }
-.topic{
+
+.subscribe-button {
+    padding: 1rem;
+    background-color: #3498DB;
+    font-size: 1rem;
+    border: none;
+    color: #fff;
+}
+
+.Hi {
+    color: #3498DB;
+}
+
+.well {
+    color: #fff;
+
+}
+
+.Popular-Topics {
+    display: flex;
+    padding: 3rem;
+    margin: auto;
+    width: 65%;
+    height: 20%;
+    margin-bottom: 2rem;
+    background-color: rgba(53, 54, 95, 0.3);
+}
+
+.topic {
     padding-top: 3rem;
     color: #fff;
 }
-.img1{
+
+
+
+
+
+.img1 {
     border-radius: 0.3rem;
     opacity: 0.5;
 }
-.img2{
+
+.img2 {
     border-radius: 0.3rem;
     opacity: 0.5;
 }
-.img3{
+
+.img3 {
     border-radius: 0.3rem;
     opacity: 0.5;
 }
-.topic-images{
+
+.topic-images {
     padding-left: 2rem;
     /* position: relative; */
-  /* display: flex; */
+    /* display: flex; */
 }
+
 /* .adventure{
     position: absolute;
     top: 50%;
@@ -148,6 +182,181 @@ background-color: rgba(53, 54, 95, 0.3) ;
     top: 60%;
 } */
 
-.Latest-blog-post{
-    text-align: center;
+.Latest-blog-post {
+    /* margin-left: 15rem; */
+    padding: 5rem 0;
+
+    color: #fff;
 }
+.Latest-blog-post h1{
+    padding-left: 15rem;
+}
+.blog-card-group{
+    margin-top: 3rem;
+}
+.blog-card{
+    background-color: rgba(53, 54, 95, 0.3) ;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    width: 60rem;
+    margin-left: 15rem;
+    transition: 0.25s ease;
+}
+.blog-card:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 10px hsla(0, 0%, 0%, 0.1);
+}
+.blog-topic{
+    background-color: #10162A;
+}
+.buttonblog-{
+    margin-top: 2rem;
+}
+.blog-card .h3:hover{
+    text-decoration: underline;
+
+}
+.blog-card .h3{
+    padding-bottom: 3rem;
+}
+.blog-text{
+    padding-bottom: 3rem;
+}
+.blog .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.blog-card{
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    gap: 20px;
+}
+.profile-wrapper{
+    width: 56px;
+    height: 56px;
+    background: #6b7cb4;
+    padding: 3px;
+    border-radius: 50%;
+}
+.profile-wrapper img{border-radius: 50%;
+}
+
+.wrapper h4{
+    padding-top: 2rem;
+}
+
+.blog-img{
+    width: 20rem;
+}
+.blog-profile{
+    width: 5rem;
+}
+.read-button{
+background-color: #419ce6;
+    padding: 0.5rem;
+    margin-top: 5rem;
+    width: 10rem;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+#menu-btn{
+    position: fixed;
+    top: 0.8rem;
+    left: 0.5rem;  
+    z-index: 1000;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    color: #fff;
+    display: none;
+}
+@media (max-width:991px) {
+    html{
+        font-size: 55%;
+        overflow: auto;
+    }
+    body{
+        padding-left: 0;
+    }
+
+
+
+
+
+
+
+   
+
+    /* .Popular-Topics {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+
+    } */
+}
+@media(max-width:600px){
+    .nav-menu {
+        display: none;
+    }
+    .nav-buttons{
+        display: none;
+    }
+    #menu-btn{
+        display: initial;
+    }
+    .logo{
+        padding-top: 3rem;
+    }
+    .hero{
+        margin-left: -15rem;
+        }
+}
+@media (max-width:991px) {
+    
+ 
+.Popular-Topics{
+    margin-left: 4rem;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+
+}
+.topic{
+text-align: center;    
+margin-top: -3rem;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+  .Latest-blog-post{
+    margin-left: -12rem;
+   }
+   .img1 {
+    width: 50%;
+    margin-left: 12rem;
+   } 
+   .img2{
+    width: 50%;    
+    margin-left: 12rem;
+
+
+   }
+   .img3{
+    width: 50%;
+    margin-left: 12rem;
+
+
+   }
+}
+

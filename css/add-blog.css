@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+:root{
+    --blue:#3498DB;
+    --white:#fff;
+    --light-color:#777;
+    --bg-color:#031c30;
+    --border:.1rem solid rgba(235, 38, 38, 0.2);
+    --box-shadow:.4rem .4rem 1rem #ccc,
+                -.4rem -.4rem 1rem #fff;
+    --box-shadow-inset:.4rem .4rem 1rem #ccc inset,
+          -.4rem -.4rem 1rem #fff inset;            
+
+}
+body{
+    background-color: var(--bg-color);
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+
+    
+}
+.arrow{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding-left: 20rem;
+    padding-top: 2rem;
+  
+}
+.add-blog{
+    margin-top: 3rem;
+
+    background-color: rgba(53, 54, 95, 0.3) ;
+    width: 33rem;
+    padding: 1rem;
+        margin-left: 25rem;
+        margin-bottom: 20rem;
+
+}
+.post{
+    width: 15rem;
+    background: #3498DB;
+    padding: 0.5rem;
+
+}
+.add-blog input{
+width: 30rem;
+background-color: rgba(53, 54, 95, 0.3) ;
+border: solid 0.8px #3498DB;
+padding: 1rem;
+border-radius: 1rem;
+margin-bottom: 2rem;
+}
+textarea{
+    background-color: rgba(53, 54, 95, 0.3) ;
+    width: 30rem;
+    border: solid 0.8px #3498DB;
+    border-radius: 1rem;
+    padding: 1rem;
+
+
+}
+
+
+.add-blog h2{
+    padding-bottom: 3rem;
+
+}
+.add-blog label{
+    padding-top: 2rem;
+}

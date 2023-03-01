@@ -17,11 +17,17 @@
   <div class="dashbord">
     <h1>MyBlog</h1>
     <div class="side-nav">
-      <a href="">Dashboard</a>
-      <a href="#blogs" onclick="toggle()">View all Blogs</a>
-      <a href="#manage-blogs" onclick="toggle()">Manage Blogs</a>
-      <a href="#manage-users" onclick="toggle()">Manage Users</a>
-      <a href="#add-blogs" class="blog-added"> <i class="fa-solid fa-plus" onclick="toggle()"></i>Add Blog</a>
+      <a href="" class="a">Dashboard</a>
+      <a href="#blogs" class="a" onclick="toggle()">View all Blogs</a>
+      <a href="#manage-blogs" class="a" onclick="toggle()">Manage Blogs</a>
+      <a href="./table.html" class="a" onclick="toggle()">Manage Users</a>
+      <a href="#add-blogs" class="a"> <i class="fa-solid fa-plus" onclick="toggle()"></i>Add Blog</a>
+      <button class="logout">  <a href="./new.html">Log out</a> </button>
+
+
+      <!-- <button class="login">  Login</a> </button> -->
+
+
 
       
 
@@ -35,7 +41,6 @@
       <div id="menu-btn" class="fas fa-bars"></div>
 
       <div class="content-dashboard">
-
 
         <div class="content-card">
           <div class="card">
@@ -81,9 +86,9 @@
         </div>
       </div>
 
-      <div class="blog-list">
+      <!-- <div class="blog-list"> -->
         <table>
-          <thead>
+          <!-- <thead>
             <tr>
               <th>No</th>
               <th>Blog Title</th>
@@ -91,7 +96,7 @@
               <th>Likes</th>
               <th>Comments</th>
             </tr>
-          </thead>
+          </thead> -->
 
           <tbody>
             <tr>
@@ -350,90 +355,120 @@
     </section>
     <section id="manage-users" class="manage-users">
     
-      <div class="container-blog">
-        <h6> Manage Users</h6>
-        <table>
-          <thead>
+      <!-- <div class="container-blog"> -->
+        <!-- <h6> Manage Users</h6>
+        <form action="" onsubmit="displayData()" autocomplete="off">
+          <table>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>E-mail</th>
+                <th>Password</th>
+                <th>role</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+  
+            <tbody>
+            
+            </tbody>
+          </table> -->
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <table> -->
+          <!-- <thead>
             <tr>
               <th>No</th>
-              <th>Blog Title</th>
-              <th>Post Date</th>
-              <th>Likes</th>
-              <th>Comments</th>
+              <th>Full Name</th>
+              <th>Email</th>
+              <th>Phone Number</th>
+              <th>Role</th>
               <th>Actions</th>
 
             </tr>
           </thead>
 
-          <tbody>
-            <tr>
-              <td class="no">01</td>
-              <td id="blog-title">How MongoDb Works</td>
-              <td id="post-date">31/Jan/2023</td>
-              <td>20 likes</td>
-              <td>10 comments</td>
+          <tbody> -->
+            <!-- <tr>
+              <td class="no"></td>
+              <td id="blog-title"></td>
+              <td id="post-date"></td>
+              <td></td>
+              <td></td>
               <td>    <i class="fa-solid fa-pen-to-square edit-icon "></i><i class="fa-solid fa-trash delete-icon"></i>
               </td>
 
 
-            </tr>
-            <tr>
-              <td>02</td>
-              <td id="blog-title">How MongoDb Works</td>
-              <td id="post-date">31/Jan/2023</td>
-              <td>20 likes</td>
-              <td>10 comments</td>
-              <td>    <i  class="fa-solid fa-pen-to-square edit-icon "></i>   <i class="fa-solid fa-trash delete-icon"></i>
-              </td>
-
-
-            </tr>
-            <tr>
-              <td>03</td>
-              <td id="blog-title">How MongoDb Works</td>
-              <td id="post-date">31/Jan/2023</td>
-              <td>20 likes</td>
-              <td>10 comments</td>
-              <td>    <i class="fa-solid fa-pen-to-square edit-icon "></i>    <i class="fa-solid fa-trash delete-icon"></i>
-              </td>
-
-
-            </tr>
-            <tr>
-              <td>04</td>
-              <td id="blog-title">How MongoDb Works</td>
-              <td id="post-date">31/Jan/2023</td>
-              <td>20 likes</td>
-              <td>10 comments</td>
+            </tr> -->
+            <!-- <tr>
+              <td class="no"></td>
+              <td id="blog-title"></td>
+              <td id="post-date"></td>
+              <td></td>
+              <td></td>
               <td>    <i class="fa-solid fa-pen-to-square edit-icon "></i><i class="fa-solid fa-trash delete-icon"></i>
               </td>
 
 
-            </tr>
-            <tr>
-              <td>05</td>
-              <td id="blog-title">How MongoDb Works</td>
-              <td id="post-date">31/Jan/2023</td>
-              <td>20 likes</td>
-              <td>10 comments</td>
+            </tr> -->
+            <!-- <tr>
+              <td class="no"></td>
+              <td id="blog-title"></td>
+              <td id="post-date"></td>
+              <td></td>
+              <td></td>
               <td>    <i class="fa-solid fa-pen-to-square edit-icon "></i><i class="fa-solid fa-trash delete-icon"></i>
               </td>
 
 
-            </tr>
-            <tr>
-              <td>06</td>
-              <td id="blog-title">How MongoDb Works</td>
-              <td id="post-date">31/Jan/2023</td>
-              <td>20 likes</td>
-              <td>10 comments</td>
-              <td>    <i class="fa-solid fa-pen-to-square edit-icon "></i>    <i class="fa-solid fa-trash delete-icon"></i>
+            </tr> -->
+            <!-- <tr>
+              <td class="no"></td>
+              <td id="blog-title"></td>
+              <td id="post-date"></td>
+              <td></td>
+              <td></td>
+              <td>    <i class="fa-solid fa-pen-to-square edit-icon "></i><i class="fa-solid fa-trash delete-icon"></i>
               </td>
 
 
-            </tr>
-          </tbody>
-        </table>
+            </tr> -->
+            <!-- <tr>
+              <td class="no"></td>
+              <td id="blog-title"></td>
+              <td id="post-date"></td>
+              <td></td>
+              <td></td>
+              <td>    <i class="fa-solid fa-pen-to-square edit-icon "></i><i class="fa-solid fa-trash delete-icon"></i>
+              </td>
+
+
+              <tr> -->
+                <!-- <td class="no"></td>
+                <td id="blog-title"></td>
+                <td id="post-date"></td>
+                <td></td>
+                <td></td>
+                <td>    <i class="fa-solid fa-pen-to-square edit-icon "></i><i class="fa-solid fa-trash delete-icon"></i>
+                </td>
+  
+  
+              </tr> -->
+          <!-- </tbody> -->
+        <!-- </table> -->
+        </form>
       </div>
 
 
@@ -473,9 +508,15 @@
 
 
   </section>
+  <script type="text/javascript" src="./index.js"></script>
+  <script>
+    displayData()
+</script>
   <script src="./JS/blog-post.js"></script>
   <script src="./JS/blog.js"></script>
   <script src="./json.js"></script>
+ 
+ 
 </body>
 
 </html>
