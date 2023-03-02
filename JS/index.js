@@ -2,7 +2,7 @@ const signUp = (e) => {
 
   let fname = document.getElementById("fname").value;
   let email = document.getElementById("email").value; 
-
+  let PhoneNumber = document.getElementById("pnumber");
   let password = document.getElementById("password").value;
   const role = "visitor";
   let formData = JSON.parse(localStorage.getItem("formData")) || [];
@@ -13,7 +13,7 @@ const signUp = (e) => {
         data.fname.toLowerCase() == fname.toLowerCase()
     );
   if (!exist) {
-    formData.push({ fname, email, role, password });
+    formData.push({ fname, email, role,PhoneNumber, password });
     localStorage.setItem("formData", JSON.stringify(formData));
     document.querySelector("form").reset();
     document.getElementById("fname").focus();
@@ -34,12 +34,15 @@ function displayData() {
    <td>${++i}</td>
    <td>${user.fname}</td>
    <td>${user.email}</td>
+   <td>${user.PhoneNumber}</td>
+
    <td>${user.password}</td>
    <td>${user.role}</td>
    <td>
-   <button   style=" color:white; padding:6px 9px; border-radius:8px;" type="button"  onclick="deleteUser('${
+   <button   style=" color:white;  " type="button"  onclick="deleteUser('${
      user.email
    }');"><i class="fa-solid fa-trash delete-icon" style="color:red;"></i> </button>
+   <i class="fas fa-edit" style="color:blue;"></i></button>
    </td>
    </tr>
    `;
@@ -74,7 +77,7 @@ function signIn(e) {
     if (user.role.toLowerCase() == "admin") {
       location.href = "/adminPage.html";
     } else {
-      location.href = "";
+      location.href = "/adminPage.html";
     }
   }
   e.preventDefault();

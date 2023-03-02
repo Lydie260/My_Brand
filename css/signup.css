@@ -11,9 +11,7 @@
           -.4rem -.4rem 1rem #fff inset;            
 
 }
-img{
-    width: 20%;
-}
+
 *{
     margin:0;
     padding: 0;
@@ -23,7 +21,6 @@ img{
     border: none;
     text-decoration: none;
     list-style: none;
-    text-transform: capitalize;
     transition: .2s linear;
 
     
@@ -76,48 +73,4 @@ button{
     width: 10rem;
     cursor: pointer;
     border-radius: 0.5rem;
-}
-@media (max-width:991px){
-    html{
-        font-size: 55%;
-overflow: auto;
-    }
-    body{
-        padding-left: 0;
-    }
-    .header{
-        left: -100%;
-    }
-    .header.active{
-        left: 0%;
-        transition: .3s linear;
-    }
-    .about{
-        width: 70%;
-        height: 70%;
-    }
-    .about .heading{
-        width: 100%;
-        padding-left: 10%;
-    }
-   
-   
-    #menu-btn{
-        display: initial;
-    }
-}
-@media(max-width:600px){
-    .content p {
-        color: #27ae60;
-        width: 100%;
-    }
-}
-@media (max-width:450px){
-    html{
-font-size: 50%;
-    }
-    .header{
-        width: 100%;
-        border-right: 0;
-    }
 }

@@ -323,7 +323,7 @@ background-color: #419ce6;
         margin-left: -15rem;
         }
 }
-@media (max-width:991px) {
+@media (min-width:330px) {
     
  
 .Popular-Topics{
