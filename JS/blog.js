@@ -1,53 +1,34 @@
+const id = new URLSearchParams(window.location.search).get('id');
+const container = document.querySelector('.blog-card')
+const deleteBtn = document.querySelector('.delete')
+
+const renderPosts = async () => {
+    let uri = 'http://localhost:3000/posts';
+    const res = await fetch(uri);
+    const posts = await res.json();
+
+    let template = '';
+    posts.forEach(post => {
+        template += `
+        <div class="blog-content">
+        <h2 > ${post.title} </h2> <br>
+        <h3> <i>  ${post.author} </i></h3> <br><br>
+        <p> ${post.description}</p> <br>
+        <p><small>${post.datePosted}</small> </p> <br>
+        </div>
 
 
-// let menu = document.querySelector('#menu-btn');
-// let header = document.querySelector('.dashbord');
-
-// menu.onclick = () =>{
-//     menu.classList.toggle('fa-times');
-//     header.classList.toggle('active');
-// }
-
-
-
-
-
-
-// toggle = () => {
-//   menuBtn.classList.toggle("fa-times");
-//   menuLink.classList.toggle("active");
-// };
-
-
-let menuBtn = document.querySelector("#menu-btn");
-let menuLink = document.querySelector(".dashbord");
-//  let section = document.querySelector("section");
-
-menuBtn.addEventListener("click", () => {
-  menuBtn.classList.toggle("fa-times");
-  menuLink.classList.toggle("active");
-});
-
-toggle = () => {
-  menuBtn.classList.toggle("fa-times");
-  menuLink.classList.toggle("active");
-};
-
-
-
-let popup = document.getElementById("popup")
-function editRow(){
-  popup.classList.add("open-popup");
-  const blogtitle = row.cells[0].textContent;
-  const postdate = row.cells[1].textContent;
-  document.getElementById("blog-title").value = blogtitle;
-  document.getElementById("post-date").value = postdate;
-
-
+        
+        `
+    })
+    container.innerHTML = template;
+    // console.log(posts);
 
 }
-
-function saveChanges(){
-  popup.classList.remove("open-popup");
-
-}
+deleteBtn.addEventListener('click', async (e) =>{
+    const res = await fetch('http://localhost:3000/posts/' + id, {
+        method: 'DELETE'
+    })
+Window.location.replace('/allBlogs.html');
+})
+window.addEventListener('DOMContentLoaded', () => renderPosts());

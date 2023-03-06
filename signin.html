@@ -14,7 +14,7 @@
         <div class="form-wrap">
             <h1>Log In</h1>
             <p>It's free and only takes a minute</p>
-            <form  onsubmit="signIn(event)" autocomplete="off">
+            <form id="login-user"  role="form" onsubmit="loginUser(event); " autocomplete="off">
                 <div class="form-group">
                     <input type="email" id="email" name="email" placeholder="Emai Address" ><br><br>
                     <input type="password" id="password" name="password" placeholder="Password" ><br><br>
@@ -26,6 +26,6 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="./JS/login.js"></script>
 </body>
 </html>

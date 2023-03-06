@@ -1,38 +1,23 @@
-const form = document.querySelector("form");
-let image = "";
+const form = document.querySelector('form');
 
-document.getElementById("img").addEventListener("change", (e) => {
-  const file = e.target.files[0];
-  const reader = new FileReader();
-  reader.onloadend = () => {
-    const base64String = reader.result.replace("data:", "").replace(/^.+,/, "");
-    image = base64String;
-  };
-  reader.readAsDataURL(file);
-});
-const createNewBlog = async (e) => {
+const createPost = async (e) =>{
   e.preventDefault();
-  const temp = {
+
+  const doc = {
     title: form.title.value,
     author: form.author.value,
     description: form.description.value,
     datePosted: form.datePosted.value,
-    img:image,
-  
-  };
-  console.log(temp)
-  await fetch("http://localhost:3000/posts", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(temp),
+  }
+  await fetch('http://localhost:3000/posts', {
+    method: 'POST',
+    body: JSON.stringify(doc),
+    headers: {'content-Type' : 'application/json'}
+
   });
-
-     window.location.replace("/allBlogs.html");
-};
-form.addEventListener("submit", createNewBlog);
-
-
-
+  window.location.replace('/allblogs.html')
+}
+form.addEventListener('submit', createPost);
 
 
 
