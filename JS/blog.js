@@ -10,12 +10,14 @@ const renderPosts = async () => {
     let template = '';
     posts.forEach(post => {
         template += `
-        <div class="blog-content">
-        <h2 > ${post.title} </h2> <br>
-        <h3> <i>  ${post.author} </i></h3> <br><br>
-        <p> ${post.description}</p> <br>
-        <p><small>${post.datePosted}</small> </p> <br>
-        </div>
+<div class="">
+<h2 > ${post.title} </h2> <br>
+<h3> <i>  ${post.author} </i></h3> <br><br>
+<p> ${post.description}</p> <br>
+<p><small>${post.datePosted}</small> </p> <br>
+
+</div>
+
 
 
         
