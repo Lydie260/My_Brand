@@ -1,20 +1,22 @@
-import Response from "../utilis/response";
+import Response from "../utilis/response.js";
 import status from "http-status";
-import { decodeToken } from "../utilis/token";
-import userModel from "../models/userModel";
+import { decodeToken } from "../utilis/token.js";
+import userModel from "../models/userModel.js";
 
 
 export const verifyUserToken = async(req,res,next) =>{
     try{
         const token =
-        req.header("auth-token") ||
+        req.header("authorization") ||
         req.params["auth-token"] ||
         req.body.token ||
         req.query["auth-token"];
+        // console.log(req.headers);
         if(!token) {
             return Response.errorMessage(res, "No token provided", status.NOT_FOUND);
 
         } 
+
         const payload = decodeToken(token);
         const {name} = payload;
         if(name === "jsonWebTokenError"){
@@ -31,8 +33,9 @@ export const verifyUserToken = async(req,res,next) =>{
             );
         }
         const user = await userModel.findOne({_id: payload?.user?._id}).select(
-            "_password"
+            "_password "
         );
+        // console.log(user)
         if(!user){
             return Response.errorMessage(
                 res,

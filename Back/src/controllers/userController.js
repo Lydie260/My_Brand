@@ -1,5 +1,5 @@
-import userModel from "../models/userModel";
-import handleCrud from "../utilis/handleCrud";
+import userModel from "../models/userModel.js";
+import handleCrud from "../utilis/handleCrud.js";
 
 const signup= handleCrud.createOne(userModel);
  const getOne = handleCrud.getOneById(userModel);

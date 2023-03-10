@@ -2,10 +2,19 @@ import express from "express";
 import mongoose from "mongoose";
 import "dotenv/config"
 import bodyParser from "body-parser";
-import routes from "./src/routes/user";
+import cors from "cors";
+import routes from "./src/routes/user.js";
+import routers from "./src/routes/blogs.js"
+import swaggerDoc from "./src/swagger/index.js"
+
+
 const app = express();
+//const swaggerJSDoc = require("swagger-jsdoc");
 app.use(bodyParser.json());
 app.use ('/',routes)
+app.use('/',routers)
+app.use(cors())
+app.use("/mybrand",swaggerDoc)
 
 
   // server configuration
