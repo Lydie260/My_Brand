@@ -148,10 +148,10 @@ const options = {
                 $ref: "#/components/schemas/User",
               },
               example: {
-                fullName: "Admin",
-                email: "admin@gmail.com",
-                phone: "0123456789",
-                password: "12345",
+                fullName: "Name",
+                email: "name@gmail.com",
+                phone: "079999999",
+                password: "name",
               },
             },
           },
@@ -221,7 +221,7 @@ const options = {
 "/api/create-blog": {
   post: {
     tags: ["Blog"],
-    description: "Create new blog article",
+    description: "Create new blog ",
     requestBody: {
       content: {
         "application/json": {
@@ -249,7 +249,7 @@ const options = {
     "/api/get-all-blogs": {
       get: {
         tags: ["Blog"],
-        description: "Get All Blog Articles",
+        description: "Get All Blog ",
         parameters: [],
         security: [],
         responses: {
@@ -262,10 +262,11 @@ const options = {
         },
       },
     },
-    "/get-one-blog": {
+
+    "/api/get-one-blog/{id}": {
       get: {
         tags: ["Blog"],
-        description: "Get All Blog Articles",
+        description: "Get one Blog ",
         parameters: [],
         security: [],
         responses: {
@@ -278,10 +279,11 @@ const options = {
         },
       },
     },
+
     "/update/{id}": {
       put: {
         tags: ["Blog"],
-        description: "Update blog article",
+        description: "Update blog ",
         parameters: [
           {
             in: "path",
@@ -296,8 +298,8 @@ const options = {
                 $ref: "#/components/schemas/Blog",
               },
               example: {
-                title: "testing blog article title update",
-                content: "testing blog article content update",
+                title: " blog  title update",
+                content: " blog  content update",
               },
             },
           },
@@ -397,15 +399,19 @@ const options = {
         properties: {
           title: {
             type: "string",
-            description: "Article title",
+            description: "blog title",
+          },
+          author:{
+            type: "string",
+
           },
           content: {
             type: "string",
-            description: "Article content",
+            description: "blog content",
           },
           image: {
             type: "string",
-            description: "Article image url",
+            description: "blog image url",
             format: "binary",
           },
         },
