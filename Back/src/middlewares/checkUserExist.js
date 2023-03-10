@@ -1,8 +1,8 @@
-import userModel from "../models/userModel";
-import { hashPassword, isPasswordMatching } from "../utilis/hashPassword";
- import Response from "../utilis/response";
+import userModel from "../models/userModel.js";
+import { hashPassword, isPasswordMatching } from "../utilis/hashPassword.js";
+ import Response from "../utilis/response.js";
  import status from "http-status";
- import { generateToken } from "../utilis/token";
+ import { generateToken } from "../utilis/token.js";
 
  export const checkUser = async (req,res,next) =>{
     let {email, password} = req.body;
