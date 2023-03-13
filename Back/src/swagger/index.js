@@ -9,7 +9,7 @@ const options = {
   info: {
     title: "My Brand",
     version: "1.0.0",
-    description: "My Protofolio Backend.",
+    description: "My brand Backend.",
   },
   basePath: "/",
   security: [
@@ -35,10 +35,10 @@ const options = {
                 $ref: "#/components/schemas/User",
               },
               example: {
-                fullName: "Admin",
-                email: "admin@gmail.com",
-                phone: "0123456789",
-                password: "12345",
+                fullName: "user",
+                email: "user@gmail.com",
+                phone: "076666666",
+                password: "user",
               },
             },
           },
@@ -70,8 +70,8 @@ const options = {
                 $ref: "#/components/schemas/User",
               },
               example: {
-                email: "admin@gmail.com",
-                password: "123456",
+                email: "user@gmail.com",
+                password: "user",
               },
             },
           },
@@ -263,12 +263,19 @@ const options = {
       },
     },
 
-    "/api/get-one-blog/{id}": {
+
+    "/blog/{id}":{
       get: {
-        tags: ["Blog"],
-        description: "Get one Blog ",
-        parameters: [],
         security: [],
+        tags: ["Blog"],
+        description: "Get one Blog",
+        parameters: [
+          {
+            in: "path",
+            name: "id",
+            required: true,
+          },
+        ],
         responses: {
           200: {
             description: "successfully",
@@ -279,6 +286,22 @@ const options = {
         },
       },
     },
+    // "/blog/{id}": {
+    //   get: {
+    //     tags: ["Blog"],
+    //     description: "Get one Blog ",
+    //     parameters: [],
+    //     security: [],
+    //     responses: {
+    //       200: {
+    //         description: "successfully",
+    //       },
+    //       500: {
+    //         description: "Internal Server Error",
+    //       },
+    //     },
+    //   },
+    // },
 
     "/update/{id}": {
       put: {
