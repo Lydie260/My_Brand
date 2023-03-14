@@ -264,9 +264,10 @@ const options = {
     },
 
 
-    "/blog/{id}":{
+    "/api/blog/{id}":{
       get: {
         security: [],
+
         tags: ["Blog"],
         description: "Get one Blog",
         parameters: [
@@ -286,24 +287,9 @@ const options = {
         },
       },
     },
-    // "/blog/{id}": {
-    //   get: {
-    //     tags: ["Blog"],
-    //     description: "Get one Blog ",
-    //     parameters: [],
-    //     security: [],
-    //     responses: {
-    //       200: {
-    //         description: "successfully",
-    //       },
-    //       500: {
-    //         description: "Internal Server Error",
-    //       },
-    //     },
-    //   },
-    // },
+  
 
-    "/update/{id}": {
+    "api/blog-update/{id}": {
       put: {
         tags: ["Blog"],
         description: "Update blog ",
@@ -381,7 +367,91 @@ const options = {
         },
       },
     },
+
+    // comments and likes
+
+    "/api/blog/{blog_id}/like": {
+      post: {
+        tags: ["Blog"],
+        description: "Like on  blog ",
+        parameters: [
+          {
+            in: "path",
+            name: "blog_id",
+          },
+        ],
+        requestBody: {
+          content: {
+            "application/json": {
+              schema: {
+                $ref: "#/components/schemas/Blog",
+              },
+            },
+          },
+        },
+        responses: {
+          200: {
+            description: "successfully",
+          },
+          401: {
+            description: "Not Authorized",
+          },
+          404: {
+            description: "Article doesn't exist!",
+          },
+          500: {
+            description: "Internal Server Error",
+          },
+        },
+      },
+    },
+
     
+    "/api/blog/{blog_id}/comment": {
+      post: {
+        tags: ["Blog"],
+        description: "comment on  blog ",
+        parameters: [
+          {
+            in: "path",
+            name: "blog_id",
+          },
+        ],
+        requestBody: {
+          content: {
+            "application/json": {
+              schema: {
+                $ref: "#/components/schemas/Blog",
+              },
+            },
+          },
+        },
+        responses: {
+          200: {
+            description: "successfully",
+          },
+          401: {
+            description: "Not Authorized",
+          },
+          404: {
+            description: "Article doesn't exist!",
+          },
+          500: {
+            description: "Internal Server Error",
+          },
+        },
+      },
+    },
+
+
+
+
+
+
+
+
+
+
   },
   components: {
     schemas: {
@@ -439,6 +509,25 @@ const options = {
           },
         },
       },
+      // Comment: {
+      //   type: "object",
+      //   properties : {
+      //     name: {
+      //       type: "String",
+      //       description: "sender's email",
+      //     },
+      //     email:{
+      //       type: "String",
+      //       description: "sender's email"
+      //     },
+      //     comment: {
+      //       type: "String",
+      //       description: "comment",
+      //     }
+      //   }
+      // },
+
+
     },
     securitySchemes: {
       bearerAuth: {
