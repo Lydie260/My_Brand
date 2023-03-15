@@ -18,7 +18,7 @@ app.use("/mybrand",swaggerDoc)
 
 
   // server configuration
-  const server = process.env.PORT || 3040
+  const server = process.env.PORT || 1010
 app.listen(server,() =>{
     console.log (`server is running on port ${server}`);
 })
