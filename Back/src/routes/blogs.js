@@ -7,7 +7,7 @@ import {commentingOnblog,likeblog} from "../utilis/handleCrud.js"
 import registerValidations from "../middlewares/validation.js"
 
 const router = Router();
-router.post("/api/create-blog",verifyUserToken,verifyAccess, blogControllers.createBlog);
+router.post("/api/create-blog",verifyUserToken, blogControllers.createBlog);
 router.get("/api/get-all-blogs",blogControllers.getallBlogs)
 router.get("/api/blog/:id",blogControllers.getoneBlog);
 router.put("/api/blog-update/:id",verifyUserToken, blogControllers.updateBlog);
