@@ -224,7 +224,7 @@ const options = {
     description: "Create new blog ",
     requestBody: {
       content: {
-        "application/json": {
+        'multipart/form-data': {
           schema: {
             $ref: "#/components/schemas/Blog",
           },
@@ -410,11 +410,12 @@ const options = {
     "/api/blog/{blog_id}/comment": {
       post: {
         tags: ["Blog"],
-        description: "comment on  blog ",
+        description: "Comment on article blog article",
         parameters: [
           {
             in: "path",
-            name: "blog_id",
+            name: "article_id",
+            required: true,
           },
         ],
         requestBody: {
@@ -423,8 +424,12 @@ const options = {
               schema: {
                 $ref: "#/components/schemas/Blog",
               },
+              example: {
+                comment: "that content is very helpful thanks",
+              },
             },
           },
+          required: true,
         },
         responses: {
           200: {
@@ -442,6 +447,14 @@ const options = {
         },
       },
     },
+
+
+
+
+
+
+
+
 
 
 

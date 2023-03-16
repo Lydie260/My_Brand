@@ -13,8 +13,8 @@ describe("Testing Auth routes", () =>{
     it("should register a user.", async () =>{
         const res = await chai.request(app).post("/signup").send({
             FullName: "testFullName",
-            email: "djany@gmail.com",
-            phone: "test0788300360",
+            email: "uwase@gmail.com",
+            phone: "test0756432",
             password: "123",
 
         });
