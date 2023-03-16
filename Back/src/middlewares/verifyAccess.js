@@ -1,15 +1,41 @@
-const verifyAccess=(requiredRole)=>{
-    return async(req,res,next)=>{
-        try{
-            const {role}=req.user;
-            // console.log(req.user)
-            if(requiredRole!==role){
-                return res.status(401).json({error:"Unauthorised! You don't have access to this api"})
-            }
-            return next();
-        } catch (error){
-            console.log("verify access error is"+error)
-        }
+import jwt from "jsonwebtoken";
+import asyncHandler from "express-async-handler"
+import User from "../models/userModel.js";
+
+export const protect = asyncHandler(async (req, res, next) => {
+  let token;
+  if (
+    req.headers.authorization &&
+    req.headers.authorization.startsWith("Bearer")
+  ) {
+    try {
+      // Get token from header
+      token = req.headers.authorization.split(" ")[1];
+      // Verify token
+      const decoded = jwt.verify(token, process.env.JWT_KEY).user;
+      req.user = await User.findOne({
+        _id: decoded._id,
+      }).select("-password");
+      next();
+    } catch (error) {
+      console.log(error);
+      res.status(401).json({ message: "Not authorized" });
     }
-}
-export default verifyAccess;
+  }
+  if (!token) {
+    res.status(401).json({ message: "Not authorized, no token" });
+  }
+});
+
+export default {protect}
+
+
+
+
+
+
+
+
+
+
+
