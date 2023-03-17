@@ -1,24 +1,22 @@
-
-
+import blogModel from "../models/blogModel.js";
 const createBlog = (Model) => async (req, res, next) => {
-    let reqData = req.body
-  
-  try {
-    let imageUrl = "";
-    if (req.files) {
-      const image = await imageUpload(req);
-      imageUrl = image.url;
-      reqData.image = imageUrl;
-    }
-    const doc = await Model.create(reqData);
-    if (!doc) {
-        return res.status (404).json ({message:"failed to create a blog"});
+    let reqData = req.body;
+    try {
+      if (req.user.role.toString() == "Admin") {
+     
+        const doc = await Model.create(reqData);
+        if (!doc) {
+            return res.status (404).json ({message:"failed to create a blog"});
+    
+        }
+        return res.status(200).json({message: 'Blog Created successfully', data: doc});
 
+      } else {
+        res.status(401).json({ message: "User Not Authorized" });
+      }
+    } catch (error) {
+      res.status(500).json(error);
     }
-    return res.status(200).json({message: 'Blog Created successfully', data: doc});
-}catch(error){
-  console.log(error)
-}
 };
 
 //get all datas

@@ -25,7 +25,7 @@ const options = {
     "/signup": {
       post: {
         tags: ["Users"],
-        description: "User SigUp",
+        description: "User SignUp",
         security: [],
         parameters: [],
         requestBody: {
@@ -187,16 +187,7 @@ const options = {
               required: true,
             },
           ],
-          requestBody: {
-            content: {
-              "application/json": {
-                schema: {
-                  $ref: "#/components/schemas/User",
-                },
-              },
-            },
-            required: true,
-          },
+        
           responses: {
             200: {
               description: "successfully",
