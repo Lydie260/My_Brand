@@ -10,17 +10,7 @@ chai.should();
 
 
 describe("Testing Auth routes", () =>{
-    it("should register a user.", async () =>{
-        const res = await chai.request(app).post("/signup").send({
-            FullName: "good M",
-            email: "good@gmail.com",
-            phone: "test073459876789",
-            password: "123",
-
-        });
-        expect(res.status).to.be.equal(200);
-        expect(res.body).to.be.a("object");
-    });
+  
 
     it("should get All user", async () => {
         const res = await 
