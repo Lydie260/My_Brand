@@ -23,7 +23,7 @@ describe("Testing Auth routes", () =>{
     it("should login user.", async () => {
         const res = await
         chai.request(app).post("/login").send({
-            email: "lilys@gmail.com",
+            email: "keza12@gmail.com",
             password: "123"
         });
         expect(res.status).to.be.equal(200);
