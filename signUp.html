@@ -17,11 +17,14 @@
         <div class="form-wrap">
             <h1>Sign Up</h1>
             <p>It's free and only takes a minute</p>
-            <form id="create-user" role="form" onsubmit="createUser(event)" autocomplete="off">
+            <form id="create-user" method="post" 
+            name="createAccount"
+          
+            onsubmit="signUpForm(event);">
                 <div class="form-group">
                     <input type="text" id="fullName" name="fullName" placeholder="full Name" required/><br><br>
                     <input type="text" id="email" name="email" placeholder="Emai Address" required/><br><br>
-                    <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" required/><br><br>
+                    <input type="text" id="phone" name="phone" placeholder="Phone Number" required/><br><br>
                     <input type="password" id="password" name="password" placeholder="Password" required/><br><br>
                     <button type="submit">Sign Up</button>
                     <h4>Already have an account?  <a href="./signin.html">Signin Here</a> </h4>
@@ -33,6 +36,45 @@
       
      
     </div>
-    <script type="text/javascript" src="./JS/signup.js"></script>
+    <!-- <script type="text/javascript" src="./JS/signup.js"></script> -->
+
+    <script>
+        const signUpForm = (e) => {
+        e.preventDefault();
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = JSON.stringify({
+          fullName: document.createAccount.fullName.value,
+          email: document.createAccount.email.value,
+          phone: document.createAccount.phone.value,
+          password: document.createAccount.password.value,
+        });
+
+        var requestOptions = {
+          method: "POST",
+          headers: myHeaders,
+          body: raw,
+          redirect: "follow",
+        };
+
+        fetch("http://localhost:5000/signup", requestOptions)
+          .then((response) => response.json())
+          .then((result) => {
+            console.log(result);
+            if (result.status == 200) {
+              alert("Your Account created Successfuly");
+              window.open("signin.html", "_self");
+            } else {
+              alert(result.error);
+              return false;
+            }
+          })
+          .catch((error) => console.log("error", error));
+      };
+    </script>
+
+
+    
 </body>
 </html>

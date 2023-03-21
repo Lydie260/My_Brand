@@ -11,9 +11,7 @@
           -.4rem -.4rem 1rem #fff inset;            
 
 }
-img{
-    width: 20%;
-}
+
 *{
     margin:0;
     padding: 0;
@@ -76,47 +74,40 @@ button{
     cursor: pointer;
     border-radius: 0.5rem;
 }
-@media (max-width:991px){
-    html{
-        font-size: 55%;
-overflow: auto;
+@media (max-width:923px){
+    .container{
+        margin-left: -1rem;
+        width: 80%;
+     
+}
+html{
+    margin-left: 18rem;
+}
+
+.form-wrap{
+    padding-left: 5rem;
+}
+}
+
+@media  (max-width:550px){
+    .container{
+        width: 80%;
+
     }
-    body{
-        padding-left: 0;
-    }
-    .header{
-        left: -100%;
-    }
-    .header.active{
-        left: 0%;
-        transition: .3s linear;
-    }
-    .about{
-        width: 70%;
-        height: 70%;
-    }
-    .about .heading{
+    .form-wrap .form-group input{
         width: 100%;
-        padding-left: 10%;
-    }
-   
-   
-    #menu-btn{
-        display: initial;
+
     }
 }
-@media(max-width:600px){
-    .content p {
-        color: #27ae60;
+
+@media  (max-width:300px){
+    .container{
+        width: 80%;
+
+    }
+    .form-wrap .form-group input{
         width: 100%;
+
     }
 }
-@media (max-width:450px){
-    html{
-font-size: 50%;
-    }
-    .header{
-        width: 100%;
-        border-right: 0;
-    }
-}
+

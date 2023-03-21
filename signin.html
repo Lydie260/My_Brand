@@ -1,31 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In</title>
     <link rel="stylesheet" href="./css/signup.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 </head>
-<body>          <a href="./new.html">  <i class="fa-solid fa-arrow-left arrow"></i>
-</a>
+
+<body> <a href="./new.html"> <i class="fa-solid fa-arrow-left arrow"></i>
+    </a>
     <div class="container">
-        <div class="form-wrap">
+        <div class="form-wrap" id="login">
             <h1>Log In</h1>
             <p>It's free and only takes a minute</p>
-            <form id="login-user"  role="form" onsubmit="loginUser(event); " autocomplete="off">
+            <form id="login-user" role="form" onsubmit="loginUser(event); " autocomplete="off">
                 <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Emai Address" ><br><br>
-                    <input type="password" id="password" name="password" placeholder="Password" ><br><br>
-<button type="submit">Sign In</button>                    <h4>Not have an account?  <a href="./signUp.html">signUp Here</a> </h4>
+                    <input type="email" id="email" name="email" placeholder="Emai Address"><br><br>
+                    <input type="password" id="password" name="password" placeholder="Password"><br><br>
+                    <button type="submit">Sign In</button>
+                    <h4>Not have an account? <a href="./signUp.html">signUp Here</a> </h4>
 
 
                 </div>
             </form>
         </div>
     </div>
+    <script>
+        document.getElementById("login").addEventListener("submit", (e) => {
+            e.preventDefault();
 
-    <script type="text/javascript" src="./JS/login.js"></script>
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+
+            var raw = JSON.stringify({
+                email: email,
+                password: password,
+            });
+
+            var requestOptions = {
+                method: "POST",
+                headers: myHeaders,
+                body: raw,
+                redirect: "follow",
+            };
+
+            fetch("http://localhost:5000/login", requestOptions)
+                .then((response) => response.json())
+                .then((result) => {
+                    console.log(result);
+                    if (result.status == 200) {
+                        alert("Log in  Successfuly");
+ 
+                        localStorage.setItem("loginedUser", JSON.stringify(result.data));
+                        if (result.data.user.role == "Admin") {
+                            location.href = "./adminPge.html";
+                        } else {
+                            location.href = "/allBlogs.html";
+                        }
+                    } else {
+                        alert(result.error);
+                    }
+                })
+                .catch((error) => console.log("error", error));
+        });</script>
+
+    <!-- <script type="text/javascript" src="./JS/login.js"></script> -->
 </body>
+
 </html>
