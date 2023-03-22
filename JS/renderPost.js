@@ -13,10 +13,12 @@ const container = document.querySelector(".blog-card-group")
       result.data.forEach((posts) => {
         blog += `
         <div class="blog-card">
-        <h2 class="Title">${posts.title}</h2>
         <p>${posts.content}</p>
+        <h2 class="Title">${posts.title}</h2>
+
 
         <h4>Author:${posts.author}</h4>
+        <img src="${posts.image}"/>
         <i class="fa-solid fa-thumbs-up" id="like"></i>
         <i class="fa-solid fa-message" id="comment"></i>
 
