@@ -167,7 +167,7 @@
             </tr>
           </thead>
 
-          <tbody id="blogs_id">
+          <tbody id="blog_table">
             
           </tbody>
         </table>
@@ -211,16 +211,14 @@
               <input type="text" name="author" placeholder="author" required>
             </div>
             <div class="description">
-              <textarea name="description" id="" cols="30" rows="10" placeholder="description" required></textarea>
+              <textarea name="content" id="" cols="30" rows="10" placeholder="description" required></textarea>
   
             </div>
             <div class="date-posted">
               <input type="text" name="datePosted" placeholder="date-posted" required>
 
             </div>
-            <label for="">Upload Image </label><br>
-  
-            <input type="file" name="img" id="img"> <br>
+            
   
             <button type="submit"  class="post">Post a Blog</button>
   
@@ -233,11 +231,12 @@
 
 
   </section>
-
-  <script src="./JS/blog-post.js"></script>
+<script src="./JS/renderUsers.js"></script>
+<script src="./JS/getPost.js" ></script>
+  <!-- <script src="./JS/blog-post.js"></script> -->
 <!-- <script src="./JS/blog.js"></script>   -->
-<script src="./JS/usersList.js"></script>
-<script src="./JS/manage-blog.js"></script>
+<!-- <script src="./JS/usersList.js"></script> -->
+<!-- <script src="./JS/manage-blog.js"></script> -->
 <!-- <script src="./JS/signup.js"></script> -->
   <!-- <script>
     displayData()

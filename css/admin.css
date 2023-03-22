@@ -73,6 +73,18 @@ body{
     
 
 }
+.delete-button{
+background-color: red;
+width: 5rem;
+float: right;
+font-size: 1rem;
+
+}
+.update-button{
+    background-color: #3498DB;
+    width: 5rem;
+    font-size: 1rem;
+}
 a{
     text-decoration: none;
     color: #fff;

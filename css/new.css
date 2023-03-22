@@ -292,9 +292,12 @@ background-color: #419ce6;
     color: #fff;
     display: none;
 }
-#comment{
-margin-left: 1rem;
+.delete{
+    background-color: #3498DB;
+    border: none;
+    width: 30%;
 }
+
 @media ( max-width:991px) {
     html{
         font-size: 55%;
