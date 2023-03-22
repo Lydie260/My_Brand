@@ -13,7 +13,7 @@
     <a href="./new.html"><i class="fa-solid fa-arrow-left arrow"></i></a>
     <div class="add-blog">
         <h2 class="h2">Add Blog</h2>
-        <form id="create-blog" method="post" name="createBlog" onsubmit="createBlog(event);">
+        <form>
         <div class="blog-items">
           
             <div class="title">
@@ -30,7 +30,9 @@
               <input type="text" name="postedDate" placeholder="date-posted">
 
             </div>
-            
+            <label for="">Upload Image </label><br>
+  
+            <input type="file" name="image" id="img"> <br>
   
             <button type="submit" class="post">Post a Blog</button>
   
@@ -40,5 +42,6 @@
       </form>
       </div>
 
+     <script src="/JS/create-blog.js"></script>
 </body>
 </html>
