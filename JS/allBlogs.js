@@ -5,7 +5,7 @@ const allBlogs = document.querySelector(".blog-card-group")
                 method: "GET",
                 redirect: "follow",
             };
-            fetch("http://localhost:3000/api/get-all-blogs", requestData)
+            fetch("https://my-brand-backend-production-6c58.up.railway.app/api/get-all-blogs", requestData)
 
             .then((response) => response.json())
             .then((result) => {
