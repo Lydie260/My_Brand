@@ -5,7 +5,7 @@ const renderUser = async () =>{
         method: "GET",
         redirect: "follow",
     };
-    fetch("http://localhost:3000/users", requestUser)
+    fetch("https://my-brand-backend-production-6c58.up.railway.app/users", requestUser)
     .then((response) => response.json())
     .then((result) =>{
         let user = "";
