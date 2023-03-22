@@ -1,11 +1,11 @@
-const container = document.querySelector(".blog-card-group")
-        const renderPost = async () =>{
+const allBlogs = document.querySelector(".blog-card-group")
+        const renderAllBlogs = async () =>{
             
-            var requestOptions = {
+            var requestData = {
                 method: "GET",
                 redirect: "follow",
             };
-            fetch("http://localhost:3000/api/get-all-blogs", requestOptions)
+            fetch("http://localhost:3000/api/get-all-blogs", requestData)
 
             .then((response) => response.json())
             .then((result) => {
@@ -13,7 +13,7 @@ const container = document.querySelector(".blog-card-group")
       result.data.forEach((posts) => {
         blog += `
         <div class="blog-card">
-        <h2 class="Title">${posts.title}</h2>
+        <h2>${posts.title}</h2>
         <p>${posts.content}</p>
 
         <h4>Author:${posts.author}</h4>
@@ -22,8 +22,8 @@ const container = document.querySelector(".blog-card-group")
 
         </div>`;
       });
-      container.innerHTML = blog;
+      allBlogs.innerHTML = blog;
         });
         };
         
-addEventListener("DOMContentLoaded", () => renderPost());
+addEventListener("DOMContentLoaded", () => renderAllBlogs());

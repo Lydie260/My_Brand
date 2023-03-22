@@ -13,7 +13,7 @@
     <a href="./new.html"><i class="fa-solid fa-arrow-left arrow"></i></a>
     <div class="add-blog">
         <h2 class="h2">Add Blog</h2>
-        <form>
+        <form id="create-blog" method="post" name="createBlog" onsubmit="createBlog(event);">
         <div class="blog-items">
           
             <div class="title">
@@ -23,16 +23,14 @@
               <input type="text" name="author" placeholder="author">
             </div>
             <div class="description">
-              <textarea name="description" id="" cols="30" rows="10" placeholder="description"></textarea>
+              <textarea name="content" id="" cols="30" rows="10" placeholder="description"></textarea>
   
             </div>
             <div class="date-posted">
-              <input type="text" name="datePosted" placeholder="date-posted">
+              <input type="text" name="postedDate" placeholder="date-posted">
 
             </div>
-            <label for="">Upload Image </label><br>
-  
-            <input type="file" name="img" id="img"> <br>
+            
   
             <button type="submit" class="post">Post a Blog</button>
   
@@ -42,7 +40,5 @@
       </form>
       </div>
 
-      <script src="./JS/blog-post.js"></script>
-      <script src="./JS/blog.js"></script>
 </body>
 </html>
