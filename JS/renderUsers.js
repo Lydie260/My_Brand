@@ -1,35 +1,39 @@
 let tbody = document.querySelector("#user_table");
+async function deleteUser(el){
+    const id = el.getAttribute("userId")
+    console.log(id)
 
+    await fetch (` http://localhost:3000/user/delete/${id}`,{
+        method: 'DELETE'
+    })
+    renderUser();
+}
 const renderUser = async () =>{
     var requestUser = {
         method: "GET",
         redirect: "follow",
     };
-    fetch("https://my-brand-backend-production-6c58.up.railway.app/users", requestUser)
+    fetch("http://localhost:3000/users", requestUser)
     .then((response) => response.json())
     .then((result) =>{
-        let user = "";
         result.data.forEach((users, i) =>{
-            user +=`
+            tbody.innerHTML +=`
             <tr>
    <td>${++i}</td>
    <td>${users.fullName}</td>
 <td>${users.email}</td>
    <td>${users.phone}</td>
     <td>${users.role}</td>
-    <td>    <button class="delete-button">Delete</button>
+    <td>    <button userId="${users._id}" class="delete-button" onclick="deleteUser(this)">Delete</button>
     </td>
     <td>    <button class="update-button">update</button>
     </td>
-</tr>
-            
-            
-            
-            `
+</tr>`
         });
-        tbody.innerHTML = user;
+
     });
 }
+
 addEventListener("DOMContentLoaded", () => renderUser());
 
 

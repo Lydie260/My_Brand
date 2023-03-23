@@ -58,6 +58,7 @@ background-color: rgba(53, 54, 95, 0.3) ;
 border: solid 0.8px #3498DB;
 padding: 1rem;
 border-radius: 1rem;
+color: #fff;
 margin-bottom: 2rem;
 }
 textarea{
@@ -66,7 +67,6 @@ textarea{
     border: solid 0.8px #3498DB;
     border-radius: 1rem;
     padding: 1rem;
-
 
 }
 

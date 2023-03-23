@@ -159,18 +159,18 @@
         <h1 class="head"><span>CONTACT </span>ME
 
         </h1>
-        <form action="">
-            <input type="text" placeholder="your name" class="box">
-            <input type="email" placeholder="your email" class="box">
-            <input type="text" placeholder="subject" class="box">
-            <textarea name="" class="box" placeholder="your message" id="" cols="30" rows="10"></textarea>
+        <form action="" class="Message">
+            <input type="text" placeholder="your name" name="names" class="box" required>
+            <input type="email" placeholder="your email" name="email" class="box" required>
+            <input type="text" placeholder="subject" name="subject" class="box" required>
+            <textarea  class="box" placeholder="your message" name="text" id="" cols="30" rows="10" required></textarea>
             <input type="submit" value="send message" class="btn">
 
         </form>
     </section>
 
 
-
+<script src="./JS/create-Message.js"></script>
     <script src="./JS/script.js"></script>
 </body>
 

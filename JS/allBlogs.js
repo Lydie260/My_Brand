@@ -16,10 +16,11 @@ const allBlogs = document.querySelector(".blog-card-group")
         <h2>${posts.title}</h2>
         <p>${posts.content}</p>
 
-        <h4>Author:${posts.author}</h4>
-        <i class="fa-solid fa-thumbs-up" id="like"></i>
+        <h4>${posts.author}</h4>
+        <div class="icons-blog">
         <i class="fa-solid fa-message" id="comment"></i>
-
+        <i class="fa-solid fa-thumbs-up" id="like"></i>
+         </div>
         </div>`;
       });
       allBlogs.innerHTML = blog;

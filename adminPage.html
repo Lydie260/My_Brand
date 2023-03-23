@@ -18,20 +18,11 @@
     <h1>MyBlog</h1>
     <div class="side-nav">
       <a href="" class="a">Dashboard</a>
-      <a href="#blogs" class="a" onclick="toggle()">View all Blogs</a>
+      <a href="#blogs" class="a" onclick="toggle()">View all Messages</a>
       <a href="#manage-blogs" class="a" onclick="toggle()">Manage Blogs</a>
       <a href="#manage-users" class="a" onclick="toggle()">Manage Users</a>
       <a href="#add-blogs" class="a"> <i class="fa-solid fa-plus" onclick="toggle()"></i>Add Blog</a>
-      <button class="logout">  <a href="./new.html">Log out</a> </button>
-
-
-      <!-- <button class="login">  Login</a> </button> -->
-
-
-
-      
-
-
+      <button class="logout"> <a href="./new.html">Log out</a> </button>
     </div>
   </div>
 
@@ -146,13 +137,27 @@
       </div>
     </section>
     <section class="container" id="blogs">
-      <div class="blog">
+      <div class="container-blog">
+        <h6>All Messagees</h6>
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Sender's name</th>
+              <th>Sender's email</th>
+              <th>Message</th>
+            </tr>
+          </thead>
+  
+          <tbody id="message_table">
+  
+          </tbody>
+        </table>
+      </div>
 
-        </div>
-         
-      </main>
+     
     </section>
-    <section id="manage-blogs" class="manage-blogs">
+    <section class="container" id="blogs">
       <div class="container-blog">
         <h6> Manage Blogs</h6>
         <table>
@@ -160,24 +165,22 @@
             <tr>
               <th>No</th>
               <th>Blog Title</th>
-              <th>Post Date</th>
-              <th>Likes</th>
-              <th>Comments</th>
+              <th>Author</th>
               <th>Actions</th>
             </tr>
           </thead>
 
           <tbody id="blog_table">
-            
+
           </tbody>
         </table>
       </div>
     </section>
-    <section id="manage-users" class="manage-users">
-    
+    <section class="container" id="blogs">
+
       <div class="container-blog">
         <h6> Manage Users</h6>
-          <table>
+        <table>
           <thead>
             <tr>
               <th>No</th>
@@ -190,58 +193,56 @@
             </tr>
           </thead>
 
-          <tbody id="user_table"> 
-            
-           </tbody>
+          <tbody id="user_table">
+
+          </tbody>
         </table>
       </div>
 
 
     </section>
-    <section id="add-blogs">
+    <section class="container" id="blogs">
       <div class="add-blog">
         <h2>Add Blog</h2>
         <div class="blog-items">
-        <form>
-          
+          <form>
+
             <div class="title">
-              <input type="text" name="title" placeholder="title" required >
+              <input type="text" name="title" placeholder="title" required>
             </div>
             <div class="author">
               <input type="text" name="author" placeholder="author" required>
             </div>
             <div class="description">
               <textarea name="content" id="" cols="30" rows="10" placeholder="description" required></textarea>
-  
-            </div>
-            <div class="date-posted">
-              <input type="text" name="datePosted" placeholder="date-posted" required>
 
             </div>
-            
-  
-            <button type="submit"  class="post">Post a Blog</button>
-  
+            <div class="date-posted">
+              <input type="text" name="postedDate" placeholder="date-posted" required>
+
+            </div>
+
+            <label for="">Upload Image </label><br>
+            <input type="file" name="image" id="img"> <br>
+
+
+            <button type="submit" class="post">Post a Blog</button>
+
           </form>
 
         </div>
-     
+
       </div>
     </section>
 
 
   </section>
-<script src="./JS/renderUsers.js"></script>
-<script src="./JS/getPost.js" ></script>
-  <!-- <script src="./JS/blog-post.js"></script> -->
-<!-- <script src="./JS/blog.js"></script>   -->
-<!-- <script src="./JS/usersList.js"></script> -->
-<!-- <script src="./JS/manage-blog.js"></script> -->
-<!-- <script src="./JS/signup.js"></script> -->
-  <!-- <script>
-    displayData()
-</script> -->
- 
+  <script src="./JS/renderUsers.js"></script>
+  <script src="./JS/getPost.js"></script>
+  <script src="/JS/create-blog.js"></script>
+
+
+
 </body>
 
 </html>

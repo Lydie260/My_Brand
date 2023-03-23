@@ -5,7 +5,7 @@ const container = document.querySelector(".blog-card-group")
                 method: "GET",
                 redirect: "follow",
             };
-            fetch("https://my-brand-backend-production-6c58.up.railway.app/api/get-all-blogs", requestOptions)
+            fetch("http://localhost:3000/api/get-all-blogs", requestOptions)
 
             .then((response) => response.json())
             .then((result) => {
@@ -13,18 +13,29 @@ const container = document.querySelector(".blog-card-group")
       result.data.forEach((posts) => {
         blog += `
         <div class="blog-card">
-        <p>${posts.content}</p>
-        <h2 class="Title">${posts.title}</h2>
+       
+
+        <div>
+        <h3 class="Title">${posts.title}</h3>
+
+        <img class="blog-image" src="${posts.image}"/>
+        </div>
+        <div> ${posts.content}</div>
 
 
         <h4>Author:${posts.author}</h4>
-        <img src="${posts.image}"/>
+      
+        <div class="icons-blog">
         <i class="fa-solid fa-thumbs-up" id="like"></i>
         <i class="fa-solid fa-message" id="comment"></i>
 
+
+         </div>
         </div>`;
       });
-      container.innerHTML = blog;
+      
+    container.innerHTML =blog;
+     
         });
         };
         
