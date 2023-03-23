@@ -13,7 +13,7 @@ const createMessage =(e)=>{
       body: formdata,
       redirect: "follow",
     };
-    fetch("http://localhost:3000/api/sendMessage", requestOptions)
+    fetch("https://my-brand-backend-production-6c58.up.railway.app/api/sendMessage", requestOptions)
       .then((response) => response.json())
       .then((result) => {
             alert("Message sent Successfully")

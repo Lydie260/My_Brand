@@ -3,7 +3,7 @@ async function deleteBlog(el){
     const id = el.getAttribute("blogId")
     console.log(id)
 
-    await fetch (` http://localhost:3000/api/delete-blog/${id}`,{
+    await fetch (` https://my-brand-backend-production-6c58.up.railway.app/api/delete-blog/${id}`,{
         method: 'DELETE'
     })
     renderPosts();
@@ -16,7 +16,7 @@ const renderPosts = async () => {
         method: "GET",
         redirect: "follow",
     };
-    fetch("http://localhost:3000/api/get-all-blogs", requestOptions)
+    fetch("https://my-brand-backend-production-6c58.up.railway.app/api/get-all-blogs", requestOptions)
 
         .then((response) => response.json())
         .then((result) => {

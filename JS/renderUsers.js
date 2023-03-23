@@ -3,7 +3,7 @@ async function deleteUser(el){
     const id = el.getAttribute("userId")
     console.log(id)
 
-    await fetch (` http://localhost:3000/user/delete/${id}`,{
+    await fetch (`https://my-brand-backend-production-6c58.up.railway.app/user/delete/${id}`,{
         method: 'DELETE'
     })
     renderUser();
@@ -13,7 +13,7 @@ const renderUser = async () =>{
         method: "GET",
         redirect: "follow",
     };
-    fetch("http://localhost:3000/users", requestUser)
+    fetch("https://my-brand-backend-production-6c58.up.railway.app/users", requestUser)
     .then((response) => response.json())
     .then((result) =>{
         result.data.forEach((users, i) =>{

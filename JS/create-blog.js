@@ -55,7 +55,7 @@ const image = document.getElementById("img");
       body: formdata,
       redirect: "follow",
     };
-    fetch("http://localhost:3000/api/create-blog", requestOptions)
+    fetch("https://my-brand-backend-production-6c58.up.railway.app/api/create-blog", requestOptions)
       .then((response) => response.json())
       .then((result) => {
             alert("Blog Created Successfully")
