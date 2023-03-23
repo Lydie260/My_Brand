@@ -9,7 +9,7 @@ const createPost = async (e) =>{
     description: form.description.value,
     datePosted: form.datePosted.value,
   }
-  await fetch('http://localhost:3000/posts', {
+  await fetch('https://my-brand-backend-production-6c58.up.railway.app/posts', {
     method: 'POST',
     body: JSON.stringify(doc),
     headers: {'content-Type' : 'application/json'}

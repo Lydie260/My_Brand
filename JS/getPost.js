@@ -1,4 +1,15 @@
 const Tbody = document.querySelector("#blog_table")
+async function deleteBlog(el){
+    const id = el.getAttribute("blogId")
+    console.log(id)
+
+    await fetch (` https://my-brand-backend-production-6c58.up.railway.app/api/delete-blog/${id}`,{
+        method: 'DELETE'
+    })
+    renderPosts();
+}
+
+
 const renderPosts = async () => {
 
     var requestOptions = {
@@ -16,11 +27,10 @@ const renderPosts = async () => {
         <td>${++i}</td>
 
         <td class="Title">${post.title}</td>
-        <td>${post.content}</td>
 
         <td>Author:${post.author}</td>
-        <td>    <button class="delete-button">Delete</button>
-    </td>
+        <td>    <button blogId="${post._id}" class="delete-button" onclick="deleteBlog(this)">Delete</button>
+        </td>
     <td>    <button class="update-button">update</button>
     </td>
 

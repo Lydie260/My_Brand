@@ -113,6 +113,7 @@ nav {
 
 #input {
     padding: 1rem;
+    color: #fff;
     width: 25rem;
     background-color: #031c30;
     border: 1px solid #3498DB;
@@ -242,11 +243,17 @@ nav {
     flex-wrap: wrap;
     gap: 15px;
 }
+/* <p>${posts.content}</p>
+<h3 class="Title">${posts.title}</h3>
+        <h4>Author:${posts.author}</h4>
+
+*/
 .blog-card{
     display: grid;
     grid-template-columns: 3fr 4fr;
     gap: 20px;
 }
+
 .profile-wrapper{
     width: 56px;
     height: 56px;
@@ -254,18 +261,20 @@ nav {
     padding: 3px;
     border-radius: 50%;
 }
-.profile-wrapper img{border-radius: 50%;
-}
+
 
 .wrapper h4{
     padding-top: 2rem;
 }
 
-.blog-img{
-    width: 20rem;
+
+.icons-blog{
+    color: #0c60a5;
+    float: left;
+    cursor: pointer;
 }
-.blog-profile{
-    width: 5rem;
+.blog-image{
+    width: 200px;
 }
 .read-button{
 background-color: #419ce6;

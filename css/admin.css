@@ -238,6 +238,7 @@ border: solid 0.8px #3498DB;
 padding: 1rem;
 border-radius: 1rem;
 margin-bottom: 2rem;
+color: #fff;
 }
 textarea{
     background-color: rgba(53, 54, 95, 0.3) ;
@@ -245,6 +246,7 @@ textarea{
     border: solid 0.8px #3498DB;
     border-radius: 1rem;
     padding: 1rem;
+    color: #fff;
 
 
 }
@@ -299,7 +301,7 @@ textarea{
     color: #fff;
     font-size: 1.5rem;
 }
-@media(max-width:927){
+@media(max-width:827){
     .dashbord{
         left: -50%;
     
